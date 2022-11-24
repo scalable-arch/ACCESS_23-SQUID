@@ -24,7 +24,7 @@ def parse_argument():
     parser.add_argument('--nbit',           default=8, type=int)
     parser.add_argument('--option',         default='default')
     parser.add_argument('--quant',          default='channel')
-    
+    parser.add_argument('--squid_option',   default='5_dec')
     
     return parser.parse_args()
 
