@@ -141,13 +141,13 @@ class ErrorModel(Model):
         self.encode_lut = self.get_encode_lut(args)
         self.decode_lut = self.get_decode_lut(args)
         if args.option == 'no_error' or args.option == 'default':
-            self.inject_error_to_param_default(args)
+            self.inject_error_to_weight_default(args)
             return
         if args.option == 'weight_nulling':
-            self.inject_error_to_param_and_recovery(args)
+            self.inject_error_to_weight_and_recovery(args)
             self.model.float()
             return
-        self.inject_error_to_param_and_recovery(args)
+        self.inject_error_to_weight_and_recovery(args)
         return
 
     def get_encode_lut(self, args):
@@ -169,57 +169,57 @@ class ErrorModel(Model):
             return np.array([    0, 1, 2, 3, 4, 5, 6,24, 
                                  8, 9,10,20,12,18,17,16], dtype=np.uint8)        
 
-    def inject_error_to_param_default(self, args):
+    def inject_error_to_weight_default(self, args):
         is_ch_quant = (args.quant == 'channel')
-        for name, param in self.model.named_parameters():
-            if not param.shape:
+        for name, weight in self.model.named_parameters():
+            if not weight.shape:
                 continue
             if 'bias' in name:
                 continue
             if args.option == 'no_error':
-                inject_no_err(param, args.nbit, is_ch_quant)
+                inject_no_err(weight, args.nbit, is_ch_quant)
                 continue
             if args.option == 'default':
-                inject_err_default(param, self.p, args.nbit, is_ch_quant)
+                inject_err_default(weight, self.p, args.nbit, is_ch_quant)
                 continue
 
-    def inject_error_to_param_and_recovery(self, args):
+    def inject_error_to_weight_and_recovery(self, args):
         bch = galois.BCH(127, 113)
         rs  = galois.ReedSolomon(15, 2 * args.nbit - 1)
         mask = 2 ** args.nbit - 1
         is_ch_quant = (args.quant == 'channel')
-        for name, param in self.model.named_parameters():
-            if not param.shape:
+        for name, weight in self.model.named_parameters():
+            if not weight.shape:
                 continue
             if 'bias' in name:
                 continue
             if args.option == 'bch':
-                inject_err_bch( param, self.p, args.nbit,
+                inject_err_bch( weight, self.p, args.nbit,
                                 bch, mask, is_ch_quant)
                 continue
             if args.option == 'vapi':
-                inject_err_vapi(   param, self.p, args.nbit,
+                inject_err_vapi(   weight, self.p, args.nbit,
                                 bch, mask, is_ch_quant)
                 continue
             if args.option == 'squid':
-                inject_err_squid(   param, self.p, args.nbit, 
+                inject_err_squid(   weight, self.p, args.nbit, 
                                     self.encode_lut, self.decode_lut,
                                     rs, mask, is_ch_quant)
                 continue
             if args.option == 'multi_bch':
-                inject_multi_err_bch(   param, self.p, args.nbit,
+                inject_multi_err_bch(   weight, self.p, args.nbit,
                                 bch, mask, is_ch_quant)
                 continue    
             if args.option == 'multi_vapi':
-                inject_multi_err_vapi(   param, self.p, args.nbit,
+                inject_multi_err_vapi(   weight, self.p, args.nbit,
                                 bch, mask, is_ch_quant)
                 continue
             if args.option == 'multi_squid':
-                inject_multi_err_squid(   param, self.p, args.nbit, 
+                inject_multi_err_squid(   weight, self.p, args.nbit, 
                                 self.encode_lut, self.decode_lut,
                                 rs, mask, is_ch_quant)
                 continue
             if args.option == 'weight_nulling':
-                inject_err_weight_null(param, self.p, args.nbit, mask)
+                inject_err_weight_null(weight, self.p, args.nbit, mask)
                 continue
         return 
