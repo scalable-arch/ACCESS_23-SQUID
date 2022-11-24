@@ -71,8 +71,8 @@ def inject_err_bch(   weight   : torch.Tensor,
 
         b = bch.decode(err_occur).reshape(-1, n)
         err_decode = np.packbits(np.fliplr(b), axis=1, bitorder='little')
-        err_recovery = err_decode.reshape(-1, 8)[:,:8].reshape(-1)
-        err_tensor = torch.tensor(err_recovery)
+        err_recovered = err_decode.reshape(-1, 8)[:,:8].reshape(-1)
+        err_tensor = torch.tensor(err_recovered)
 
         weight_q_1d = weight_q.view((-1,))
         weight_q_1d.bitwise_xor_(err_tensor)
@@ -125,10 +125,10 @@ def inject_err_squid(   weight   : torch.Tensor,
 
         # Recover the weight
         err_predicted = decode_lut[recover_vp ^ vp_w_err]
-        err_recovery = err_to_weight.reshape(-1) ^ err_predicted.reshape(-1)
-        err_recovery_tensor = torch.tensor(err_recovery)
+        err_recovered = err_to_weight.reshape(-1) ^ err_predicted.reshape(-1)
+        err_recovered_tensor = torch.tensor(err_recovered)
         weight_q_1d = weight_q.view(-1)
-        weight_q_1d.bitwise_xor_(err_recovery_tensor)
+        weight_q_1d.bitwise_xor_(err_recovered_tensor)
 
         # Dequantize the weight for inference test for ease
         if is_ch_quant:
@@ -231,47 +231,52 @@ def inject_multi_err_squid(weight   : torch.Tensor,
                         mask,
                         is_ch_quant):
     with torch.no_grad():
+        # Do quantization with n-bit
         if is_ch_quant:
             weight_q, scale, zero_p = quantize_channel(weight, n)
         else:
             weight_q, scale, zero_p = quantize_layer(weight, n)
+        
+        # Generate VPs and PPs
         weight_q_np = weight_q.view(torch.uint8).view(-1,8).detach().numpy()
         weight_q_unpacked = np.unpackbits(weight_q_np).reshape(-1,8)
         weight_q_weighted = weight_q_unpacked * encode_lut
-        weight_sig = np.bitwise_xor.reduce(weight_q_weighted, axis=1)
-        parity = rs.encode(weight_sig.reshape(-1,8))[:,8:]
+        vp = np.bitwise_xor.reduce(weight_q_weighted, axis=1)
+        pp = rs.encode(vp.reshape(-1,8))[:,8:]
 
+        # Memory Error Occurred to quantized weight and PP
         size = torch.numel(weight_q)
         err_origin = np.random.binomial(1, p, size * 16)
         err_idx = np.nonzero(err_origin)[0]
-
         err_unpacked = np.zeros(size * 16 + 8, dtype=np.uint8)
-
         err_unpacked[err_idx] = 1
         err_unpacked[err_idx + 1] = 1
-
         err = np.packbits(err_unpacked[:size * 16]) & mask
         err_to_weight = err.reshape(-1,16)[:,:8]
         err_to_parity = err.reshape(-1,16)[:,8: 24 - 2 * n]
         weight_w_err = weight_q_np ^ err_to_weight
-        parity ^= (err_to_parity & 0xf)
+        pp_w_err = pp ^  (err_to_parity & 0xf)
 
+        # During Decoding, first generate VPs which might be disrupted
+        received_blk = np.zeros((size // 8, 24 - 2 * n), dtype = np.uint8)  
         weight_w_err_unpacked = np.unpackbits(weight_w_err).reshape(-1,8)
         weight_w_err_weighted = weight_w_err_unpacked * encode_lut
-        weight_w_err_sig = np.bitwise_xor.reduce(weight_w_err_weighted, axis=1)
-        weight_w_err_sig = weight_w_err_sig.reshape(-1,8)
+        vp_w_err = np.bitwise_xor.reduce(weight_w_err_weighted, axis=1)
+        vp_w_err = vp_w_err.reshape(-1,8)
 
-        read_sig = np.zeros((size // 8, 24 - 2 * n), dtype = np.uint8)   
-        read_sig[:,:8] = weight_w_err_sig
-        read_sig[:,8:] = parity
+        # With PPs, recover the VP
+        received_blk[:,:8] = vp_w_err
+        received_blk[:,8:] = pp_w_err
+        recover_vp = rs.decode(received_blk)
 
-        read_sig_decoded = rs.decode(read_sig)
-        err_predicted = decode_lut[read_sig_decoded ^ weight_w_err_sig]
-        err_recovery = err_to_weight.reshape(-1) ^ err_predicted.reshape(-1)
-        err_recovery_tensor = torch.tensor(err_recovery)
-
+        # Recover the Weight
+        err_predicted = decode_lut[recover_vp ^ vp_w_err]
+        err_recovered = err_to_weight.reshape(-1) ^ err_predicted.reshape(-1)
+        err_recovered_tensor = torch.tensor(err_recovered)
         weight_q_1d = weight_q.view(-1)
-        weight_q_1d.bitwise_xor_(err_recovery_tensor)
+        weight_q_1d.bitwise_xor_(err_recovered_tensor)
+
+        # Dequantize the weight for inference test for ease
         if is_ch_quant:
             weight[:] = dequantize_channel(weight_q, scale, zero_p)
         else:
@@ -327,8 +332,8 @@ def inject_multi_err_bch(   weight   : torch.Tensor,
 
         b = bch.decode(err_occur).reshape(-1, n)
         err_decode = np.packbits(np.fliplr(b), axis=1, bitorder='little')
-        err_recovery = err_decode.reshape(-1, 8)[:,:8].reshape(-1)
-        err_tensor = torch.tensor(err_recovery)
+        err_recovered = err_decode.reshape(-1, 8)[:,:8].reshape(-1)
+        err_tensor = torch.tensor(err_recovered)
 
         weight_q_1d = weight_q.view((-1,))
         weight_q_1d.bitwise_xor_(err_tensor)
