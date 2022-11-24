@@ -140,7 +140,7 @@ class ErrorModel(Model):
         self.p = 10 ** args.ber
         self.encode_lut = self.get_encode_lut(args)
         self.decode_lut = self.get_decode_lut(args)
-        print("Current Memory Protection Scheme : ", args.option)
+
         if args.option == 'no_error' or args.option == 'default':
             self.inject_error_to_weight_default(args)
             return
