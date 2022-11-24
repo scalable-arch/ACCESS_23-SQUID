@@ -109,12 +109,9 @@ class Model():
     
     def make_model(self, args):
         model = getattr(models, args.model)(weights=self.weight)
-        print(args.model)
         if args.option == 'weight_nulling':
-            print("Model in half mode")
             model.half()
         if args.quant == 'channel' and 'squid' in args.option:
-            print("Model fused (conv and bn) + channel quantization")
             return fuse_bn_recursively(model)
         return model
 
