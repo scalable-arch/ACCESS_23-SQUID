@@ -151,21 +151,21 @@ class ErrorModel(Model):
         return
 
     def get_encode_lut(self, args):
-        if args.nbit == 7:
+        if args.nbit == 7 and args.squid_option =='5_dec':
             return np.array([0,15,8,4,2,1,0,0], dtype=np.uint8)
-        if args.nbit == 6:
+        if args.nbit == 6 and args.squid_option =='5_dec':
             return np.array([0,0,15,8,4,2,1,0], dtype=np.uint8)
-        if args.nbit == 5:
+        if args.nbit == 5 and args.squid_option =='5_dec':
             return np.array([0,0,0,15,8,4,2,1], dtype=np.uint8)
 
     def get_decode_lut(self, args):            
-        if args.nbit == 7:
+        if args.nbit == 7 and args.squid_option =='5_dec':
             return np.array([    0, 4, 8,12,16,20,24,96, 
                                 32,36,40,80,48,72,68,64], dtype=np.uint8)
-        if args.nbit == 6:
+        if args.nbit == 6 and args.squid_option =='5_dec':
             return np.array([    0, 2, 4, 6, 8,10,12,48, 
                                 16,18,20,40,24,36,34,32], dtype=np.uint8)
-        if args.nbit == 5:
+        if args.nbit == 5 and args.squid_option =='5_dec':
             return np.array([    0, 1, 2, 3, 4, 5, 6,24, 
                                  8, 9,10,20,12,18,17,16], dtype=np.uint8)        
 
