@@ -109,9 +109,12 @@ class Model():
     
     def make_model(self, args):
         model = getattr(models, args.model)(weights=self.weight)
-        if args.option == 'weight_nulling' or args.option == 'no_error':
+        print(args.model)
+        if args.option == 'weight_nulling':
+            print("Model in half mode")
             model.half()
-        if args.quant == 'channel':
+        if args.quant == 'channel' and 'squid' in args.option:
+            print("Model fused (conv and bn) + channel quantization")
             return fuse_bn_recursively(model)
         return model
 
@@ -140,10 +143,11 @@ class ErrorModel(Model):
         self.p = 10 ** args.ber
         self.encode_lut = self.get_encode_lut(args)
         self.decode_lut = self.get_decode_lut(args)
+        print("Current Memory Protection Scheme : ", args.option)
         if args.option == 'no_error' or args.option == 'default':
             self.inject_error_to_weight_default(args)
             return
-        if args.option == 'weight_nulling':
+        if args.option == 'wn' or args.option == 'multi_wn':
             self.inject_error_to_weight_and_recovery(args)
             self.model.float()
             return
@@ -180,7 +184,7 @@ class ErrorModel(Model):
                 inject_no_err(weight, args.nbit, is_ch_quant)
                 continue
             if args.option == 'default':
-                inject_err_default(weight, self.p, args.nbit, is_ch_quant)
+                inject_single_err_default(weight, self.p, args.nbit, is_ch_quant)
                 continue
 
     def inject_error_to_weight_and_recovery(self, args):
@@ -193,33 +197,26 @@ class ErrorModel(Model):
                 continue
             if 'bias' in name:
                 continue
-            if args.option == 'bch':
-                inject_err_bch( weight, self.p, args.nbit,
-                                bch, mask, is_ch_quant)
+            if args.option == 'wn':
+                inject_single_err_wn(weight, self.p)
                 continue
             if args.option == 'vapi':
-                inject_err_vapi(   weight, self.p, args.nbit,
-                                bch, mask, is_ch_quant)
+                inject_single_err_vapi(weight, self.p, args.nbit, bch, mask)
                 continue
             if args.option == 'squid':
-                inject_err_squid(   weight, self.p, args.nbit, 
+                inject_single_err_squid(   weight, self.p, args.nbit, 
                                     self.encode_lut, self.decode_lut,
                                     rs, mask, is_ch_quant)
+                continue   
+            if args.option == 'multi_wn':
+                inject_double_err_wn(weight, self.p)
                 continue
-            if args.option == 'multi_bch':
-                inject_multi_err_bch(   weight, self.p, args.nbit,
-                                bch, mask, is_ch_quant)
-                continue    
             if args.option == 'multi_vapi':
-                inject_multi_err_vapi(   weight, self.p, args.nbit,
-                                bch, mask, is_ch_quant)
+                inject_double_err_vapi(weight, self.p, args.nbit, bch, mask)
                 continue
             if args.option == 'multi_squid':
-                inject_multi_err_squid(   weight, self.p, args.nbit, 
-                                self.encode_lut, self.decode_lut,
-                                rs, mask, is_ch_quant)
-                continue
-            if args.option == 'weight_nulling':
-                inject_err_weight_null(weight, self.p, args.nbit, mask)
+                inject_double_err_squid( weight, self.p, args.nbit, 
+                                        self.encode_lut, self.decode_lut,
+                                        rs, mask, is_ch_quant)
                 continue
         return 
