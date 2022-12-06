@@ -268,6 +268,69 @@ def inject_double_err_squid(weight   : torch.Tensor,
         else:
             weight[:] = dequantize_layer(weight_q, scale, zero_p)
 
+def inject_double_err_interleaved_dec(  weight  : torch.Tensor, 
+                                        p       : float, 
+                                        n       : int, 
+                                        bch, 
+                                        mask,
+                                        is_ch_quant):
+    with torch.no_grad():
+        # Do quantization with n-bit
+        if is_ch_quant:
+            weight_q, scale, zero_p = quantize_channel(weight, n)
+        else:
+            weight_q, scale, zero_p = quantize_layer(weight, n)        
+        
+        # Encoding
+        weight_q_np = weight_q.view(torch.uint8).view(-1,8).detach().numpy()
+        weight_q_unpacked = np.unpackbits(weight_q_np).reshape(-1, 8)[:,3:]
+        weight_q_unpacked_odd  = weight_q_unpacked.reshape(-1,40)[:,::2]
+        weight_q_unpacked_even = weight_q_unpacked.reshape(-1,40)[:,1::2]
+        odd = bch.encode(weight_q_unpacked_odd)#[:,40:]
+        even = bch.encode(weight_q_unpacked_odd)#[:,40:]
+
+        # Error generation
+        size = torch.numel(weight_q)
+        err_origin = np.random.binomial(1, 0.001, size * 16)
+        err_idx = np.nonzero(err_origin)[0]
+        err_unpacked = np.zeros(size * 16 + 8, dtype=np.uint8)
+        err_unpacked[err_idx] = 1
+        err_unpacked[err_idx + 1] = 1
+        err = np.packbits(err_unpacked[:size * 16]) & 0x1f
+
+        # Error injection
+        weight_w_err = weight_q_np ^ err.reshape(-1,16)[:,:8]
+        odd_parity_err  = err.reshape(-1,16)[:,8:10]
+        even_parity_err = err.reshape(-1,16)[:,10:12]
+        odd_parity_err_unpacked = np.unpackbits(odd_parity_err).reshape(-1,8)[:,2:].reshape(-1,12)
+        even_parity_err_unpacked = np.unpackbits(even_parity_err).reshape(-1,8)[:,2:].reshape(-1,12)
+
+        weight_q_unpacked = np.unpackbits(weight_w_err).reshape(-1, 8)[:,3:]
+        weight_q_unpacked_odd  = weight_q_unpacked.reshape(-1,40)[:,::2]
+        weight_q_unpacked_even = weight_q_unpacked.reshape(-1,40)[:,1::2]
+
+        # Error Decoding
+        odd[:,:20] = weight_q_unpacked_odd
+        odd[:,20:] = odd_parity_err_unpacked
+        even[:,:20] = weight_q_unpacked_even
+        even[:,20:] = even_parity_err_unpacked  
+
+        weight_recovered_odd = bch.decode(odd).reshape(-1,20)
+        weight_recovered_even = bch.decode(even).reshape(-1,20)
+        weight_recovered_unpacked = np.zeros((weight_recovered_odd.shape[0], 40), dtype=np.uint8)
+        weight_recovered_unpacked[:,::2] = weight_recovered_odd
+        weight_recovered_unpacked[:,1::2] = weight_recovered_even
+
+        weight_recovered_unpacked_expand = np.zeros((weight_recovered_unpacked.reshape(-1,5).shape[0], 8), dtype=np.uint8)
+        weight_recovered_unpacked_expand[:,3:] = weight_recovered_unpacked.reshape(-1,5)
+        weight_q = torch.tensor(np.packbits(weight_recovered_unpacked_expand).reshape(-1,8))
+
+        # Dequantize the weight for inference test for ease
+        if is_ch_quant:
+            weight[:] = dequantize_channel(weight_q, scale, zero_p)
+        else:
+            weight[:] = dequantize_layer(weight_q, scale, zero_p)  
+
 def inject_triple_err_wn(weight : torch.Tensor, p: float):
     with torch.no_grad():
         weight_1d = weight.view(torch.int16).view((-1,))
