@@ -109,7 +109,7 @@ class Model():
     
     def make_model(self, args):
         model = getattr(models, args.model)(weights=self.weight)
-        if args.option == 'weight_nulling':
+        if 'wn' in args.option:
             model.half()
         if args.quant == 'channel' and 'squid' in args.option:
             return fuse_bn_recursively(model)
@@ -144,7 +144,7 @@ class ErrorModel(Model):
         if args.option == 'no_error' or args.option == 'default':
             self.inject_error_to_weight_default(args)
             return
-        if args.option == 'wn' or args.option == 'multi_wn':
+        if 'wn' in args.option:
             self.inject_error_to_weight_and_recovery(args)
             self.model.float()
             return
@@ -185,8 +185,6 @@ class ErrorModel(Model):
                 continue
 
     def inject_error_to_weight_and_recovery(self, args):
-        bch = galois.BCH(127, 113)
-        rs  = galois.ReedSolomon(15, 2 * args.nbit - 1)
         mask = 2 ** args.nbit - 1
         is_ch_quant = (args.quant == 'channel')
         for name, weight in self.model.named_parameters():
@@ -198,9 +196,11 @@ class ErrorModel(Model):
                 inject_single_err_wn(weight, self.p)
                 continue
             if args.option == 'vapi':
+                bch = galois.BCH(127, 113)
                 inject_single_err_vapi(weight, self.p, args.nbit, bch, mask)
                 continue
             if args.option == 'squid':
+                rs  = galois.ReedSolomon(15, 2 * args.nbit - 1)
                 inject_single_err_squid(   weight, self.p, args.nbit, 
                                     self.encode_lut, self.decode_lut,
                                     rs, mask, is_ch_quant)
@@ -209,10 +209,25 @@ class ErrorModel(Model):
                 inject_double_err_wn(weight, self.p)
                 continue
             if args.option == 'multi_vapi':
+                bch = galois.BCH(127, 113)
                 inject_double_err_vapi(weight, self.p, args.nbit, bch, mask)
                 continue
             if args.option == 'multi_squid':
+                rs  = galois.ReedSolomon(15, 2 * args.nbit - 1)
                 inject_double_err_squid( weight, self.p, args.nbit, 
+                                        self.encode_lut, self.decode_lut,
+                                        rs, mask, is_ch_quant)
+                continue
+            if args.option == 'triple_wn':
+                inject_triple_err_wn(weight, self.p)
+                continue
+            if args.option == 'triple_vapi':
+                bch = galois.BCH(127, 113)
+                inject_triple_err_vapi(weight, self.p, args.nbit, bch, mask)
+                continue
+            if args.option == 'triple_squid':
+                rs  = galois.ReedSolomon(15, 2 * args.nbit - 1)
+                inject_triple_err_squid(weight, self.p, args.nbit, 
                                         self.encode_lut, self.decode_lut,
                                         rs, mask, is_ch_quant)
                 continue
