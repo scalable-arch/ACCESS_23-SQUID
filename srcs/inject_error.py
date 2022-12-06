@@ -291,12 +291,12 @@ def inject_double_err_interleaved_dec(  weight  : torch.Tensor,
 
         # Error generation
         size = torch.numel(weight_q)
-        err_origin = np.random.binomial(1, 0.001, size * 16)
+        err_origin = np.random.binomial(1, p, size * 16)
         err_idx = np.nonzero(err_origin)[0]
         err_unpacked = np.zeros(size * 16 + 8, dtype=np.uint8)
         err_unpacked[err_idx] = 1
         err_unpacked[err_idx + 1] = 1
-        err = np.packbits(err_unpacked[:size * 16]) & 0x1f
+        err = np.packbits(err_unpacked[:size * 16]) & mask
 
         # Error injection
         weight_w_err = weight_q_np ^ err.reshape(-1,16)[:,:8]
@@ -311,9 +311,9 @@ def inject_double_err_interleaved_dec(  weight  : torch.Tensor,
 
         # Error Decoding
         odd[:,:20] = weight_q_unpacked_odd
-        odd[:,20:] = odd_parity_err_unpacked
+        odd[:,20:] ^= odd_parity_err_unpacked
         even[:,:20] = weight_q_unpacked_even
-        even[:,20:] = even_parity_err_unpacked  
+        even[:,20:] ^= even_parity_err_unpacked  
 
         weight_recovered_odd = bch.decode(odd).reshape(-1,20)
         weight_recovered_even = bch.decode(even).reshape(-1,20)
