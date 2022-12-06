@@ -231,4 +231,9 @@ class ErrorModel(Model):
                                         self.encode_lut, self.decode_lut,
                                         rs, mask, is_ch_quant)
                 continue
+            if args.option == 'interleaved_dec':
+                bch = galois.BCH(63,51)
+                inject_double_err_interleaved_dec(  weight, self.p, args.nbit,
+                                                    bch, mask, is_ch_quant)
+                continue
         return 
