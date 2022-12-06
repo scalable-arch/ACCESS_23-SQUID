@@ -287,7 +287,7 @@ def inject_double_err_interleaved_dec(  weight  : torch.Tensor,
         weight_q_unpacked_odd  = weight_q_unpacked.reshape(-1,40)[:,::2]
         weight_q_unpacked_even = weight_q_unpacked.reshape(-1,40)[:,1::2]
         odd = bch.encode(weight_q_unpacked_odd)#[:,40:]
-        even = bch.encode(weight_q_unpacked_odd)#[:,40:]
+        even = bch.encode(weight_q_unpacked_even)#[:,40:]
 
         # Error generation
         size = torch.numel(weight_q)
