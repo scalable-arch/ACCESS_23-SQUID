@@ -323,7 +323,7 @@ def inject_double_err_interleaved_dec(  weight  : torch.Tensor,
 
         weight_recovered_unpacked_expand = np.zeros((weight_recovered_unpacked.reshape(-1,5).shape[0], 8), dtype=np.uint8)
         weight_recovered_unpacked_expand[:,3:] = weight_recovered_unpacked.reshape(-1,5)
-        weight_q = torch.tensor(np.packbits(weight_recovered_unpacked_expand).reshape(-1,8))
+        weight_q = torch.tensor(np.packbits(weight_recovered_unpacked_expand).reshape(weight.shape))
 
         # Dequantize the weight for inference test for ease
         if is_ch_quant:
