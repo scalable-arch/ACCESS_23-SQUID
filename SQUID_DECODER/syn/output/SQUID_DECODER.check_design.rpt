@@ -1,0 +1,22 @@
+ 
+****************************************
+check_design summary:
+Version:     Q-2019.12-SP5-5
+Date:        Sun Sep 25 17:27:51 2022
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      8
+    Feedthrough (LINT-29)                                           8
+--------------------------------------------------------------------------------
+
+Warning: In design 'SQUID_DECODER', input port 'weight_block_input[7][0]' is connected directly to output port 'weight_block_output[7][0]'. (LINT-29)
+Warning: In design 'SQUID_DECODER', input port 'weight_block_input[6][0]' is connected directly to output port 'weight_block_output[6][0]'. (LINT-29)
+Warning: In design 'SQUID_DECODER', input port 'weight_block_input[5][0]' is connected directly to output port 'weight_block_output[5][0]'. (LINT-29)
+Warning: In design 'SQUID_DECODER', input port 'weight_block_input[4][0]' is connected directly to output port 'weight_block_output[4][0]'. (LINT-29)
+Warning: In design 'SQUID_DECODER', input port 'weight_block_input[3][0]' is connected directly to output port 'weight_block_output[3][0]'. (LINT-29)
+Warning: In design 'SQUID_DECODER', input port 'weight_block_input[2][0]' is connected directly to output port 'weight_block_output[2][0]'. (LINT-29)
+Warning: In design 'SQUID_DECODER', input port 'weight_block_input[1][0]' is connected directly to output port 'weight_block_output[1][0]'. (LINT-29)
+Warning: In design 'SQUID_DECODER', input port 'weight_block_input[0][0]' is connected directly to output port 'weight_block_output[0][0]'. (LINT-29)
+1

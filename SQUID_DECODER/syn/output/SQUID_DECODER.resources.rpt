@@ -1,0 +1,27 @@
+ 
+****************************************
+Report : resources
+Design : SQUID_DECODER
+Version: Q-2019.12-SP5-5
+Date   : Sun Sep 25 17:27:51 2022
+****************************************
+
+
+Resource Report for Ungrouped Hierarchy second_level_decoder in file
+        /home/pdtowctor/synthesis/SQUID_DECODER/rtl/SECOND_LEVEL_DECODER.sv
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| add_x_22       | DW01_inc       | width=4    | ribm/add_141 (RIBM.sv:141) |
+=============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_x_22           | DW01_inc         | apparch (area)     |                |
+===============================================================================
+
+1

@@ -1,0 +1,711 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 10
+        -max_paths 10
+Design : SQUID_DECODER
+Version: Q-2019.12-SP5-5
+Date   : Sun Sep 25 17:27:51 2022
+****************************************
+
+Operating Conditions: SSGWC0P81V0C   Library: um28nchslogl35udl140f_ssgwc0p81v0c
+Wire Load Model Mode: enclosed
+
+  Startpoint: weight_block_input[7][2]
+              (input port clocked by vclk)
+  Endpoint: weight_block_output[0][5]
+            (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SQUID_DECODER      ZeroWLM               um28nchslogl35udl140f_ssgwc0p81v0c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  weight_block_input[7][2] (in)            0.00       0.00 f
+  U1210/X (SVP_EO2_V2_4)                   0.08       0.08 f
+  U1809/X (SVP_EO2_V2_4)                   0.05       0.13 f
+  U1806/X (SVP_EO2_V2_3)                   0.05       0.18 f
+  U1085/X (SVP_EO2_V2_2)                   0.06       0.23 f
+  U2508/X (SVP_EO2_V2_3)                   0.04       0.27 f
+  U1972/X (SVP_EO2_V2_3)                   0.04       0.32 f
+  U2004/X (SVP_EO2_V2_4)                   0.05       0.37 f
+  U2450/X (SVP_EO2_V2_3)                   0.05       0.42 f
+  U1962/X (SVP_EO2_V2_3)                   0.04       0.46 f
+  U1000/X (SVP_EO2_V2_4)                   0.05       0.51 f
+  U960/X (SVP_NR2_2)                       0.03       0.54 r
+  U943/X (SVP_EO2_V2_2)                    0.05       0.59 r
+  U1729/X (SVP_EO2_V2_3)                   0.05       0.64 r
+  U2027/X (SVP_EO2_V2_4)                   0.05       0.68 r
+  U855/X (SVP_NR2_T_2)                     0.02       0.71 f
+  U2112/X (SVP_EO2_V2_3)                   0.04       0.75 f
+  U1915/X (SVP_EO2_V2_3)                   0.05       0.79 f
+  U2111/X (SVP_EO2_V2_6)                   0.05       0.84 f
+  U773/X (SVP_BUF_1)                       0.04       0.88 f
+  U716/X (SVP_NR2_T_1)                     0.03       0.91 r
+  U1897/X (SVP_EO2_V2_3)                   0.04       0.95 r
+  U1685/X (SVP_EO2_V2_3)                   0.04       1.00 r
+  U2060/X (SVP_EO2_V2_4)                   0.05       1.05 r
+  U2059/X (SVP_EO2_V2_6)                   0.05       1.10 r
+  U2387/X (SVP_EO2_V2_6)                   0.05       1.15 r
+  U2066/X (SVP_EO2_V2_6)                   0.05       1.20 r
+  U2065/X (SVP_EO2_V2_3)                   0.05       1.25 r
+  U498/X (SVP_OAI22_S_2)                   0.03       1.28 f
+  U435/X (SVP_ND2_S_1P5)                   0.02       1.31 r
+  U430/X (SVP_AOI21_T_2)                   0.02       1.33 f
+  U2091/X (SVP_EO2_V2_4)                   0.05       1.37 f
+  U2007/X (SVP_EO2_V2_3)                   0.05       1.42 f
+  U386/X (SVP_ND2_T_3)                     0.02       1.44 r
+  U1282/X (SVP_INV_1)                      0.03       1.47 f
+  U351/X (SVP_ND2B_2)                      0.04       1.51 f
+  U1814/X (SVP_NR2_T_2)                    0.02       1.54 r
+  U2652/X (SVP_AOI31_2)                    0.01       1.55 f
+  U2909/X (SVP_EN2_F_0P7)                  0.04       1.59 f
+  weight_block_output[0][5] (out)          0.00       1.59 f
+  data arrival time                                   1.59
+
+  clock vclk (rise edge)                   1.59       1.59
+  clock network delay (ideal)              0.00       1.59
+  output external delay                    0.00       1.59
+  data required time                                  1.59
+  -----------------------------------------------------------
+  data required time                                  1.59
+  data arrival time                                  -1.59
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: weight_block_input[7][2]
+              (input port clocked by vclk)
+  Endpoint: weight_block_output[0][5]
+            (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SQUID_DECODER      ZeroWLM               um28nchslogl35udl140f_ssgwc0p81v0c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  weight_block_input[7][2] (in)            0.00       0.00 f
+  U1210/X (SVP_EO2_V2_4)                   0.08       0.08 f
+  U1809/X (SVP_EO2_V2_4)                   0.05       0.13 f
+  U1806/X (SVP_EO2_V2_3)                   0.05       0.18 f
+  U1085/X (SVP_EO2_V2_2)                   0.06       0.23 f
+  U2508/X (SVP_EO2_V2_3)                   0.04       0.27 f
+  U1972/X (SVP_EO2_V2_3)                   0.04       0.32 f
+  U2004/X (SVP_EO2_V2_4)                   0.05       0.37 f
+  U2450/X (SVP_EO2_V2_3)                   0.05       0.42 f
+  U1962/X (SVP_EO2_V2_3)                   0.04       0.46 f
+  U1000/X (SVP_EO2_V2_4)                   0.05       0.51 f
+  U960/X (SVP_NR2_2)                       0.03       0.54 r
+  U943/X (SVP_EO2_V2_2)                    0.05       0.59 r
+  U1729/X (SVP_EO2_V2_3)                   0.05       0.64 r
+  U2027/X (SVP_EO2_V2_4)                   0.05       0.68 r
+  U855/X (SVP_NR2_T_2)                     0.02       0.71 f
+  U2112/X (SVP_EO2_V2_3)                   0.04       0.75 f
+  U1915/X (SVP_EO2_V2_3)                   0.05       0.79 f
+  U2111/X (SVP_EO2_V2_6)                   0.05       0.84 f
+  U773/X (SVP_BUF_1)                       0.04       0.88 f
+  U716/X (SVP_NR2_T_1)                     0.03       0.91 r
+  U1897/X (SVP_EO2_V2_3)                   0.04       0.95 r
+  U1685/X (SVP_EO2_V2_3)                   0.04       1.00 r
+  U2060/X (SVP_EO2_V2_4)                   0.05       1.05 r
+  U2059/X (SVP_EO2_V2_6)                   0.05       1.10 r
+  U2387/X (SVP_EO2_V2_6)                   0.05       1.15 r
+  U2066/X (SVP_EO2_V2_6)                   0.05       1.20 r
+  U2065/X (SVP_EO2_V2_3)                   0.05       1.25 r
+  U498/X (SVP_OAI22_S_2)                   0.03       1.28 f
+  U435/X (SVP_ND2_S_1P5)                   0.02       1.31 r
+  U430/X (SVP_AOI21_T_2)                   0.02       1.33 f
+  U2091/X (SVP_EO2_V2_4)                   0.05       1.37 f
+  U2007/X (SVP_EO2_V2_3)                   0.05       1.42 f
+  U386/X (SVP_ND2_T_3)                     0.02       1.44 r
+  U1282/X (SVP_INV_1)                      0.03       1.47 f
+  U351/X (SVP_ND2B_2)                      0.04       1.51 f
+  U1814/X (SVP_NR2_T_2)                    0.02       1.54 r
+  U2652/X (SVP_AOI31_2)                    0.01       1.55 f
+  U2909/X (SVP_EN2_F_0P7)                  0.04       1.59 f
+  weight_block_output[0][5] (out)          0.00       1.59 f
+  data arrival time                                   1.59
+
+  clock vclk (rise edge)                   1.59       1.59
+  clock network delay (ideal)              0.00       1.59
+  output external delay                    0.00       1.59
+  data required time                                  1.59
+  -----------------------------------------------------------
+  data required time                                  1.59
+  data arrival time                                  -1.59
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: weight_block_input[7][2]
+              (input port clocked by vclk)
+  Endpoint: weight_block_output[0][5]
+            (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SQUID_DECODER      ZeroWLM               um28nchslogl35udl140f_ssgwc0p81v0c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  weight_block_input[7][2] (in)            0.00       0.00 f
+  U1210/X (SVP_EO2_V2_4)                   0.08       0.08 f
+  U1809/X (SVP_EO2_V2_4)                   0.05       0.13 f
+  U1806/X (SVP_EO2_V2_3)                   0.05       0.18 f
+  U1085/X (SVP_EO2_V2_2)                   0.06       0.23 f
+  U2508/X (SVP_EO2_V2_3)                   0.04       0.27 f
+  U1972/X (SVP_EO2_V2_3)                   0.04       0.32 f
+  U2004/X (SVP_EO2_V2_4)                   0.05       0.37 f
+  U2450/X (SVP_EO2_V2_3)                   0.05       0.42 f
+  U1962/X (SVP_EO2_V2_3)                   0.04       0.46 f
+  U1000/X (SVP_EO2_V2_4)                   0.05       0.51 f
+  U960/X (SVP_NR2_2)                       0.03       0.54 r
+  U943/X (SVP_EO2_V2_2)                    0.05       0.59 r
+  U1729/X (SVP_EO2_V2_3)                   0.05       0.64 r
+  U2027/X (SVP_EO2_V2_4)                   0.05       0.68 r
+  U855/X (SVP_NR2_T_2)                     0.02       0.71 f
+  U2112/X (SVP_EO2_V2_3)                   0.04       0.75 f
+  U1915/X (SVP_EO2_V2_3)                   0.05       0.79 f
+  U2111/X (SVP_EO2_V2_6)                   0.05       0.84 f
+  U773/X (SVP_BUF_1)                       0.04       0.88 f
+  U716/X (SVP_NR2_T_1)                     0.03       0.91 r
+  U1897/X (SVP_EO2_V2_3)                   0.04       0.95 r
+  U1685/X (SVP_EO2_V2_3)                   0.04       1.00 r
+  U2060/X (SVP_EO2_V2_4)                   0.05       1.05 r
+  U2059/X (SVP_EO2_V2_6)                   0.05       1.10 r
+  U2387/X (SVP_EO2_V2_6)                   0.05       1.15 r
+  U2066/X (SVP_EO2_V2_6)                   0.05       1.20 r
+  U2065/X (SVP_EO2_V2_3)                   0.05       1.25 r
+  U498/X (SVP_OAI22_S_2)                   0.03       1.28 f
+  U435/X (SVP_ND2_S_1P5)                   0.02       1.31 r
+  U430/X (SVP_AOI21_T_2)                   0.02       1.33 f
+  U2091/X (SVP_EO2_V2_4)                   0.05       1.37 f
+  U2007/X (SVP_EO2_V2_3)                   0.05       1.42 f
+  U386/X (SVP_ND2_T_3)                     0.02       1.44 r
+  U1282/X (SVP_INV_1)                      0.03       1.47 f
+  U351/X (SVP_ND2B_2)                      0.04       1.51 f
+  U1814/X (SVP_NR2_T_2)                    0.02       1.54 r
+  U2652/X (SVP_AOI31_2)                    0.01       1.55 f
+  U2909/X (SVP_EN2_F_0P7)                  0.04       1.59 f
+  weight_block_output[0][5] (out)          0.00       1.59 f
+  data arrival time                                   1.59
+
+  clock vclk (rise edge)                   1.59       1.59
+  clock network delay (ideal)              0.00       1.59
+  output external delay                    0.00       1.59
+  data required time                                  1.59
+  -----------------------------------------------------------
+  data required time                                  1.59
+  data arrival time                                  -1.59
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: weight_block_input[7][2]
+              (input port clocked by vclk)
+  Endpoint: weight_block_output[0][5]
+            (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SQUID_DECODER      ZeroWLM               um28nchslogl35udl140f_ssgwc0p81v0c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  weight_block_input[7][2] (in)            0.00       0.00 f
+  U1210/X (SVP_EO2_V2_4)                   0.08       0.08 f
+  U1809/X (SVP_EO2_V2_4)                   0.05       0.13 f
+  U1806/X (SVP_EO2_V2_3)                   0.05       0.18 f
+  U1085/X (SVP_EO2_V2_2)                   0.06       0.23 f
+  U2508/X (SVP_EO2_V2_3)                   0.04       0.27 f
+  U1972/X (SVP_EO2_V2_3)                   0.04       0.32 f
+  U2004/X (SVP_EO2_V2_4)                   0.05       0.37 f
+  U2450/X (SVP_EO2_V2_3)                   0.05       0.42 f
+  U1962/X (SVP_EO2_V2_3)                   0.04       0.46 f
+  U1000/X (SVP_EO2_V2_4)                   0.05       0.51 f
+  U960/X (SVP_NR2_2)                       0.03       0.54 r
+  U943/X (SVP_EO2_V2_2)                    0.05       0.59 r
+  U1729/X (SVP_EO2_V2_3)                   0.05       0.64 r
+  U2027/X (SVP_EO2_V2_4)                   0.05       0.68 r
+  U855/X (SVP_NR2_T_2)                     0.02       0.71 f
+  U2112/X (SVP_EO2_V2_3)                   0.04       0.75 f
+  U1915/X (SVP_EO2_V2_3)                   0.05       0.79 f
+  U2111/X (SVP_EO2_V2_6)                   0.05       0.84 f
+  U773/X (SVP_BUF_1)                       0.04       0.88 f
+  U716/X (SVP_NR2_T_1)                     0.03       0.91 r
+  U1897/X (SVP_EO2_V2_3)                   0.04       0.95 r
+  U1685/X (SVP_EO2_V2_3)                   0.04       1.00 r
+  U2060/X (SVP_EO2_V2_4)                   0.05       1.05 r
+  U2059/X (SVP_EO2_V2_6)                   0.05       1.10 r
+  U2387/X (SVP_EO2_V2_6)                   0.05       1.15 r
+  U2066/X (SVP_EO2_V2_6)                   0.05       1.20 r
+  U2065/X (SVP_EO2_V2_3)                   0.05       1.25 r
+  U498/X (SVP_OAI22_S_2)                   0.03       1.28 f
+  U435/X (SVP_ND2_S_1P5)                   0.02       1.31 r
+  U430/X (SVP_AOI21_T_2)                   0.02       1.33 f
+  U2091/X (SVP_EO2_V2_4)                   0.05       1.37 f
+  U2007/X (SVP_EO2_V2_3)                   0.05       1.42 f
+  U386/X (SVP_ND2_T_3)                     0.02       1.44 r
+  U1282/X (SVP_INV_1)                      0.03       1.47 f
+  U351/X (SVP_ND2B_2)                      0.04       1.51 f
+  U1814/X (SVP_NR2_T_2)                    0.02       1.54 r
+  U2652/X (SVP_AOI31_2)                    0.01       1.55 f
+  U2909/X (SVP_EN2_F_0P7)                  0.04       1.59 f
+  weight_block_output[0][5] (out)          0.00       1.59 f
+  data arrival time                                   1.59
+
+  clock vclk (rise edge)                   1.59       1.59
+  clock network delay (ideal)              0.00       1.59
+  output external delay                    0.00       1.59
+  data required time                                  1.59
+  -----------------------------------------------------------
+  data required time                                  1.59
+  data arrival time                                  -1.59
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: weight_block_input[4][5]
+              (input port clocked by vclk)
+  Endpoint: weight_block_output[3][4]
+            (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SQUID_DECODER      ZeroWLM               um28nchslogl35udl140f_ssgwc0p81v0c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  weight_block_input[4][5] (in)            0.00       0.00 f
+  U2437/X (SVP_EO2_V2_6)                   0.07       0.07 f
+  U2116/X (SVP_EO2_V2_6)                   0.05       0.13 f
+  U1169/X (SVP_EO2_V2_2)                   0.07       0.19 f
+  U1799/X (SVP_EO2_V2_3)                   0.05       0.24 f
+  U2619/X (SVP_EO2_V2_4)                   0.04       0.28 f
+  U1121/X (SVP_EO2_V2_4)                   0.05       0.33 f
+  U1087/X (SVP_NR2_3)                      0.03       0.36 r
+  U1770/X (SVP_EO2_V2_3)                   0.04       0.40 r
+  U1067/X (SVP_EO2_V2_3)                   0.05       0.45 r
+  U2368/X (SVP_EO2_V2_3)                   0.04       0.49 r
+  U2369/X (SVP_ND2B_V1_2)                  0.02       0.51 f
+  U1752/X (SVP_NR2_T_2)                    0.02       0.53 r
+  U2230/X (SVP_AOI21_T_4)                  0.02       0.55 f
+  U988/X (SVP_EO2_V2_3)                    0.04       0.59 f
+  U1317/X (SVP_EO2_V2_4)                   0.05       0.64 f
+  U2264/X (SVP_BUF_8)                      0.03       0.67 f
+  U909/X (SVP_BUF_S_2)                     0.03       0.70 f
+  U807/X (SVP_NR2_1)                       0.04       0.74 r
+  U2603/X (SVP_EO2_V2_3)                   0.05       0.79 r
+  U2442/X (SVP_EO2_V2_3)                   0.04       0.83 r
+  U1904/X (SVP_EO2_V2_3)                   0.05       0.88 r
+  U2073/X (SVP_ND2_S_4)                    0.03       0.90 f
+  U2003/X (SVP_EN2_V2_3)                   0.04       0.94 f
+  U2041/X (SVP_EO2_V2_3)                   0.05       0.99 f
+  U1874/X (SVP_EO2_V2_3)                   0.04       1.04 f
+  U654/X (SVP_EO2_V2_4)                    0.05       1.08 f
+  U2443/X (SVP_EO2_V2_4)                   0.05       1.13 f
+  U1343/X (SVP_INV_8)                      0.02       1.15 r
+  U2293/X (SVP_EO2_V2_6)                   0.05       1.20 r
+  U2071/X (SVP_EO2_V2_4)                   0.04       1.24 r
+  U485/X (SVP_NR2_T_2)                     0.02       1.26 f
+  U460/X (SVP_EO2_V2_3)                    0.04       1.30 f
+  U425/X (SVP_EO2_V2_3)                    0.05       1.35 f
+  U1422/X (SVP_EO2_V2_3)                   0.06       1.40 f
+  U1421/X (SVP_EO2_V2_3)                   0.05       1.46 f
+  U2658/X (SVP_NR2_T_1)                    0.03       1.48 r
+  U1416/X (SVP_NR2_T_2)                    0.02       1.51 f
+  U294/X (SVP_NR2_2)                       0.03       1.53 r
+  U2381/X (SVP_OAI21_T_3)                  0.02       1.55 f
+  U2401/X (SVP_EO2_V2_0P5)                 0.04       1.59 f
+  weight_block_output[3][4] (out)          0.00       1.59 f
+  data arrival time                                   1.59
+
+  clock vclk (rise edge)                   1.59       1.59
+  clock network delay (ideal)              0.00       1.59
+  output external delay                    0.00       1.59
+  data required time                                  1.59
+  -----------------------------------------------------------
+  data required time                                  1.59
+  data arrival time                                  -1.59
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: weight_block_input[7][2]
+              (input port clocked by vclk)
+  Endpoint: weight_block_output[0][5]
+            (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SQUID_DECODER      ZeroWLM               um28nchslogl35udl140f_ssgwc0p81v0c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  weight_block_input[7][2] (in)            0.00       0.00 f
+  U1210/X (SVP_EO2_V2_4)                   0.08       0.08 f
+  U1809/X (SVP_EO2_V2_4)                   0.05       0.13 f
+  U1806/X (SVP_EO2_V2_3)                   0.05       0.18 f
+  U1085/X (SVP_EO2_V2_2)                   0.06       0.23 f
+  U2508/X (SVP_EO2_V2_3)                   0.04       0.27 f
+  U1972/X (SVP_EO2_V2_3)                   0.04       0.32 f
+  U2004/X (SVP_EO2_V2_4)                   0.05       0.37 f
+  U2450/X (SVP_EO2_V2_3)                   0.05       0.42 f
+  U1962/X (SVP_EO2_V2_3)                   0.04       0.46 f
+  U1000/X (SVP_EO2_V2_4)                   0.05       0.51 f
+  U960/X (SVP_NR2_2)                       0.03       0.54 r
+  U943/X (SVP_EO2_V2_2)                    0.05       0.59 r
+  U1729/X (SVP_EO2_V2_3)                   0.05       0.64 r
+  U2027/X (SVP_EO2_V2_4)                   0.05       0.68 r
+  U855/X (SVP_NR2_T_2)                     0.02       0.71 f
+  U2112/X (SVP_EO2_V2_3)                   0.04       0.75 f
+  U1915/X (SVP_EO2_V2_3)                   0.05       0.79 f
+  U2111/X (SVP_EO2_V2_6)                   0.05       0.84 f
+  U773/X (SVP_BUF_1)                       0.04       0.88 f
+  U716/X (SVP_NR2_T_1)                     0.03       0.91 r
+  U1897/X (SVP_EO2_V2_3)                   0.04       0.95 r
+  U1685/X (SVP_EO2_V2_3)                   0.04       1.00 r
+  U2060/X (SVP_EO2_V2_4)                   0.05       1.05 r
+  U2059/X (SVP_EO2_V2_6)                   0.05       1.10 r
+  U2387/X (SVP_EO2_V2_6)                   0.05       1.15 r
+  U2066/X (SVP_EO2_V2_6)                   0.05       1.20 r
+  U2065/X (SVP_EO2_V2_3)                   0.05       1.25 r
+  U498/X (SVP_OAI22_S_2)                   0.03       1.28 f
+  U435/X (SVP_ND2_S_1P5)                   0.02       1.31 r
+  U430/X (SVP_AOI21_T_2)                   0.02       1.33 f
+  U2091/X (SVP_EO2_V2_4)                   0.05       1.37 f
+  U2007/X (SVP_EO2_V2_3)                   0.05       1.42 f
+  U386/X (SVP_ND2_T_3)                     0.02       1.44 r
+  U1282/X (SVP_INV_1)                      0.03       1.47 f
+  U351/X (SVP_ND2B_2)                      0.04       1.51 f
+  U1814/X (SVP_NR2_T_2)                    0.02       1.54 r
+  U2652/X (SVP_AOI31_2)                    0.01       1.55 f
+  U2909/X (SVP_EN2_F_0P7)                  0.04       1.59 f
+  weight_block_output[0][5] (out)          0.00       1.59 f
+  data arrival time                                   1.59
+
+  clock vclk (rise edge)                   1.59       1.59
+  clock network delay (ideal)              0.00       1.59
+  output external delay                    0.00       1.59
+  data required time                                  1.59
+  -----------------------------------------------------------
+  data required time                                  1.59
+  data arrival time                                  -1.59
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: weight_block_input[5][3]
+              (input port clocked by vclk)
+  Endpoint: weight_block_output[0][3]
+            (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SQUID_DECODER      ZeroWLM               um28nchslogl35udl140f_ssgwc0p81v0c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  weight_block_input[5][3] (in)            0.00       0.00 f
+  U2609/X (SVP_EO2_V2_6)                   0.08       0.08 f
+  U2445/X (SVP_EO2_V2_6)                   0.05       0.13 f
+  U1115/X (SVP_EN2_V2_1)                   0.07       0.20 f
+  U2690/X (SVP_EO2_F_1)                    0.06       0.26 f
+  U1616/X (SVP_EO2_F_1)                    0.06       0.32 f
+  U2696/X (SVP_EO2_V2_3)                   0.06       0.37 f
+  U1016/X (SVP_INV_2)                      0.03       0.40 r
+  U987/X (SVP_NR2_T_2)                     0.02       0.42 f
+  U2088/X (SVP_EO2_V2_3)                   0.04       0.46 f
+  U1757/X (SVP_EO2_V2_3)                   0.04       0.51 f
+  U926/X (SVP_NR2_1)                       0.05       0.56 r
+  U1388/X (SVP_AOI211_2)                   0.05       0.61 f
+  U905/X (SVP_EN2_F_2)                     0.05       0.66 f
+  U1579/X (SVP_EO2_V2_3)                   0.04       0.70 r
+  U2418/X (SVP_ND2_S_1P5)                  0.03       0.73 f
+  U2015/X (SVP_EO2_V2_3)                   0.05       0.78 f
+  U1563/X (SVP_EO2_V2_3)                   0.05       0.83 f
+  U1705/X (SVP_EO2_V2_3)                   0.05       0.88 f
+  U761/X (SVP_NR2_3)                       0.03       0.91 r
+  U2379/X (SVP_INV_2)                      0.02       0.92 f
+  U736/X (SVP_ND2_T_2)                     0.01       0.94 r
+  U698/X (SVP_ND2_2)                       0.02       0.96 f
+  U1886/X (SVP_EO2_V2_3)                   0.04       1.00 f
+  U2058/X (SVP_EO2_V2_4)                   0.05       1.05 f
+  U2059/X (SVP_EO2_V2_6)                   0.05       1.10 f
+  U2387/X (SVP_EO2_V2_6)                   0.05       1.15 f
+  U2066/X (SVP_EO2_V2_6)                   0.05       1.20 f
+  U2065/X (SVP_EO2_V2_3)                   0.05       1.25 f
+  U515/X (SVP_NR2_2)                       0.03       1.28 r
+  U2009/X (SVP_EO2_V2_3)                   0.04       1.32 r
+  U2246/X (SVP_EO2_V2_4)                   0.05       1.37 r
+  U2007/X (SVP_EO2_V2_3)                   0.04       1.41 r
+  U386/X (SVP_ND2_T_3)                     0.03       1.44 f
+  U1282/X (SVP_INV_1)                      0.03       1.48 r
+  U1493/X (SVP_NR2_2)                      0.02       1.50 f
+  U313/X (SVP_ND2_S_1)                     0.02       1.51 r
+  U1286/X (SVP_ND3_T_1)                    0.03       1.55 f
+  U2425/X (SVP_EO2_V2_0P5)                 0.04       1.59 f
+  weight_block_output[0][3] (out)          0.00       1.59 f
+  data arrival time                                   1.59
+
+  clock vclk (rise edge)                   1.59       1.59
+  clock network delay (ideal)              0.00       1.59
+  output external delay                    0.00       1.59
+  data required time                                  1.59
+  -----------------------------------------------------------
+  data required time                                  1.59
+  data arrival time                                  -1.59
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: weight_block_input[5][3]
+              (input port clocked by vclk)
+  Endpoint: weight_block_output[1][3]
+            (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SQUID_DECODER      ZeroWLM               um28nchslogl35udl140f_ssgwc0p81v0c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  weight_block_input[5][3] (in)            0.00       0.00 f
+  U2609/X (SVP_EO2_V2_6)                   0.08       0.08 f
+  U2445/X (SVP_EO2_V2_6)                   0.05       0.13 f
+  U1115/X (SVP_EN2_V2_1)                   0.07       0.20 f
+  U2690/X (SVP_EO2_F_1)                    0.06       0.26 f
+  U1616/X (SVP_EO2_F_1)                    0.06       0.32 f
+  U2696/X (SVP_EO2_V2_3)                   0.06       0.37 f
+  U1016/X (SVP_INV_2)                      0.03       0.40 r
+  U987/X (SVP_NR2_T_2)                     0.02       0.42 f
+  U2088/X (SVP_EO2_V2_3)                   0.04       0.46 f
+  U1757/X (SVP_EO2_V2_3)                   0.04       0.51 f
+  U926/X (SVP_NR2_1)                       0.05       0.56 r
+  U1388/X (SVP_AOI211_2)                   0.05       0.61 f
+  U905/X (SVP_EN2_F_2)                     0.05       0.66 f
+  U1579/X (SVP_EO2_V2_3)                   0.04       0.70 r
+  U2418/X (SVP_ND2_S_1P5)                  0.03       0.73 f
+  U2015/X (SVP_EO2_V2_3)                   0.05       0.78 f
+  U1563/X (SVP_EO2_V2_3)                   0.05       0.83 f
+  U1705/X (SVP_EO2_V2_3)                   0.05       0.88 f
+  U761/X (SVP_NR2_3)                       0.03       0.91 r
+  U2379/X (SVP_INV_2)                      0.02       0.92 f
+  U736/X (SVP_ND2_T_2)                     0.01       0.94 r
+  U698/X (SVP_ND2_2)                       0.02       0.96 f
+  U1886/X (SVP_EO2_V2_3)                   0.04       1.00 f
+  U2058/X (SVP_EO2_V2_4)                   0.05       1.05 f
+  U2059/X (SVP_EO2_V2_6)                   0.05       1.10 f
+  U2387/X (SVP_EO2_V2_6)                   0.05       1.15 f
+  U2066/X (SVP_EO2_V2_6)                   0.05       1.20 f
+  U2047/X (SVP_EO2_V2_4)                   0.05       1.24 f
+  U478/X (SVP_NR2_T_3)                     0.03       1.27 r
+  U456/X (SVP_AOI21_T_2)                   0.04       1.31 f
+  U2014/X (SVP_EO2_V2_4)                   0.05       1.36 f
+  U2308/X (SVP_EO2_V2_6)                   0.05       1.41 f
+  U391/X (SVP_EO2_V2_3)                    0.04       1.45 f
+  U2659/X (SVP_ND2_S_8)                    0.03       1.48 r
+  U2222/X (SVP_NR2B_8)                     0.03       1.51 r
+  U2578/X (SVP_INV_2)                      0.01       1.53 f
+  U2012/X (SVP_ND2_S_3)                    0.01       1.54 r
+  U2006/X (SVP_ND3_S_4)                    0.02       1.56 f
+  U2879/X (SVP_EN2_F_0P7)                  0.03       1.59 f
+  weight_block_output[1][3] (out)          0.00       1.59 f
+  data arrival time                                   1.59
+
+  clock vclk (rise edge)                   1.59       1.59
+  clock network delay (ideal)              0.00       1.59
+  output external delay                    0.00       1.59
+  data required time                                  1.59
+  -----------------------------------------------------------
+  data required time                                  1.59
+  data arrival time                                  -1.59
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: weight_block_input[5][3]
+              (input port clocked by vclk)
+  Endpoint: weight_block_output[0][5]
+            (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SQUID_DECODER      ZeroWLM               um28nchslogl35udl140f_ssgwc0p81v0c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  weight_block_input[5][3] (in)            0.00       0.00 f
+  U2609/X (SVP_EO2_V2_6)                   0.08       0.08 f
+  U2445/X (SVP_EO2_V2_6)                   0.05       0.13 f
+  U1115/X (SVP_EN2_V2_1)                   0.07       0.20 f
+  U2690/X (SVP_EO2_F_1)                    0.06       0.26 f
+  U1616/X (SVP_EO2_F_1)                    0.06       0.32 f
+  U2696/X (SVP_EO2_V2_3)                   0.06       0.37 f
+  U1016/X (SVP_INV_2)                      0.03       0.40 r
+  U987/X (SVP_NR2_T_2)                     0.02       0.42 f
+  U2088/X (SVP_EO2_V2_3)                   0.04       0.46 f
+  U1757/X (SVP_EO2_V2_3)                   0.04       0.51 f
+  U926/X (SVP_NR2_1)                       0.05       0.56 r
+  U1388/X (SVP_AOI211_2)                   0.05       0.61 f
+  U905/X (SVP_EN2_F_2)                     0.05       0.66 f
+  U1579/X (SVP_EO2_V2_3)                   0.04       0.70 r
+  U2418/X (SVP_ND2_S_1P5)                  0.03       0.73 f
+  U2015/X (SVP_EO2_V2_3)                   0.05       0.78 f
+  U1563/X (SVP_EO2_V2_3)                   0.05       0.83 f
+  U1705/X (SVP_EO2_V2_3)                   0.05       0.88 f
+  U761/X (SVP_NR2_3)                       0.03       0.91 r
+  U2379/X (SVP_INV_2)                      0.02       0.92 f
+  U736/X (SVP_ND2_T_2)                     0.01       0.94 r
+  U698/X (SVP_ND2_2)                       0.02       0.96 f
+  U1886/X (SVP_EO2_V2_3)                   0.04       1.00 f
+  U2058/X (SVP_EO2_V2_4)                   0.05       1.05 f
+  U2059/X (SVP_EO2_V2_6)                   0.05       1.10 f
+  U2387/X (SVP_EO2_V2_6)                   0.05       1.15 f
+  U2066/X (SVP_EO2_V2_6)                   0.05       1.20 f
+  U2065/X (SVP_EO2_V2_3)                   0.05       1.25 f
+  U498/X (SVP_OAI22_S_2)                   0.03       1.28 r
+  U435/X (SVP_ND2_S_1P5)                   0.02       1.30 f
+  U430/X (SVP_AOI21_T_2)                   0.03       1.33 r
+  U2091/X (SVP_EO2_V2_4)                   0.05       1.37 r
+  U1640/X (SVP_EO2_V2_3)                   0.04       1.41 r
+  U2197/X (SVP_EO2_V2_3)                   0.04       1.45 r
+  U2393/X (SVP_ND2_S_8)                    0.02       1.48 f
+  U362/X (SVP_INV_1)                       0.02       1.50 r
+  U2488/X (SVP_ND2_2)                      0.02       1.52 f
+  U1814/X (SVP_NR2_T_2)                    0.02       1.54 r
+  U2652/X (SVP_AOI31_2)                    0.01       1.55 f
+  U2909/X (SVP_EN2_F_0P7)                  0.04       1.59 f
+  weight_block_output[0][5] (out)          0.00       1.59 f
+  data arrival time                                   1.59
+
+  clock vclk (rise edge)                   1.59       1.59
+  clock network delay (ideal)              0.00       1.59
+  output external delay                    0.00       1.59
+  data required time                                  1.59
+  -----------------------------------------------------------
+  data required time                                  1.59
+  data arrival time                                  -1.59
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: weight_block_input[7][2]
+              (input port clocked by vclk)
+  Endpoint: weight_block_output[0][5]
+            (output port clocked by vclk)
+  Path Group: vclk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SQUID_DECODER      ZeroWLM               um28nchslogl35udl140f_ssgwc0p81v0c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock vclk (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.00       0.00 f
+  weight_block_input[7][2] (in)            0.00       0.00 f
+  U1210/X (SVP_EO2_V2_4)                   0.08       0.08 f
+  U1809/X (SVP_EO2_V2_4)                   0.05       0.13 f
+  U1806/X (SVP_EO2_V2_3)                   0.05       0.18 f
+  U1085/X (SVP_EO2_V2_2)                   0.06       0.23 f
+  U2508/X (SVP_EO2_V2_3)                   0.04       0.27 f
+  U1972/X (SVP_EO2_V2_3)                   0.04       0.32 f
+  U2004/X (SVP_EO2_V2_4)                   0.05       0.37 f
+  U2450/X (SVP_EO2_V2_3)                   0.05       0.42 f
+  U1962/X (SVP_EO2_V2_3)                   0.04       0.46 f
+  U1000/X (SVP_EO2_V2_4)                   0.05       0.51 f
+  U960/X (SVP_NR2_2)                       0.03       0.54 r
+  U943/X (SVP_EO2_V2_2)                    0.05       0.59 r
+  U1729/X (SVP_EO2_V2_3)                   0.05       0.64 r
+  U2027/X (SVP_EO2_V2_4)                   0.05       0.68 r
+  U855/X (SVP_NR2_T_2)                     0.02       0.71 f
+  U2112/X (SVP_EO2_V2_3)                   0.04       0.75 f
+  U1915/X (SVP_EO2_V2_3)                   0.05       0.79 f
+  U2111/X (SVP_EO2_V2_6)                   0.05       0.84 f
+  U773/X (SVP_BUF_1)                       0.04       0.88 f
+  U716/X (SVP_NR2_T_1)                     0.03       0.91 r
+  U1897/X (SVP_EO2_V2_3)                   0.04       0.95 r
+  U1685/X (SVP_EO2_V2_3)                   0.04       1.00 r
+  U2060/X (SVP_EO2_V2_4)                   0.05       1.05 r
+  U2059/X (SVP_EO2_V2_6)                   0.05       1.10 r
+  U2387/X (SVP_EO2_V2_6)                   0.05       1.15 r
+  U2066/X (SVP_EO2_V2_6)                   0.05       1.20 r
+  U2065/X (SVP_EO2_V2_3)                   0.05       1.25 r
+  U498/X (SVP_OAI22_S_2)                   0.03       1.28 f
+  U435/X (SVP_ND2_S_1P5)                   0.02       1.31 r
+  U430/X (SVP_AOI21_T_2)                   0.02       1.33 f
+  U2091/X (SVP_EO2_V2_4)                   0.05       1.37 f
+  U2007/X (SVP_EO2_V2_3)                   0.05       1.42 f
+  U386/X (SVP_ND2_T_3)                     0.02       1.44 r
+  U1282/X (SVP_INV_1)                      0.03       1.47 f
+  U351/X (SVP_ND2B_2)                      0.04       1.51 f
+  U1814/X (SVP_NR2_T_2)                    0.02       1.54 r
+  U2652/X (SVP_AOI31_2)                    0.01       1.55 f
+  U2909/X (SVP_EN2_F_0P7)                  0.04       1.59 f
+  weight_block_output[0][5] (out)          0.00       1.59 f
+  data arrival time                                   1.59
+
+  clock vclk (rise edge)                   1.59       1.59
+  clock network delay (ideal)              0.00       1.59
+  output external delay                    0.00       1.59
+  data required time                                  1.59
+  -----------------------------------------------------------
+  data required time                                  1.59
+  data arrival time                                  -1.59
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+1

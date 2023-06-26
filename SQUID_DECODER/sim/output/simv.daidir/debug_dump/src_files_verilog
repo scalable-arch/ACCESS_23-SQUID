@@ -1,0 +1,11 @@
+/home/pdtowctor/synthesis/SQUID_DECODER/rtl/CHIEN.sv
+/home/pdtowctor/synthesis/SQUID_DECODER/rtl/FIRST_LEVEL_DECODER.sv
+/home/pdtowctor/synthesis/SQUID_DECODER/rtl/FIRST_LEVEL_ENCODER.sv
+/home/pdtowctor/synthesis/SQUID_DECODER/rtl/FORNEY.sv
+/home/pdtowctor/synthesis/SQUID_DECODER/rtl/GFDIV.sv
+/home/pdtowctor/synthesis/SQUID_DECODER/rtl/GFMULT.sv
+/home/pdtowctor/synthesis/SQUID_DECODER/rtl/RIBM.sv
+/home/pdtowctor/synthesis/SQUID_DECODER/rtl/SECOND_LEVEL_DECODER.sv
+/home/pdtowctor/synthesis/SQUID_DECODER/rtl/SQUID_DECODER.sv
+/home/pdtowctor/synthesis/SQUID_DECODER/rtl/SYNDROME_GENERATOR.sv
+/home/pdtowctor/synthesis/SQUID_DECODER/sim/tb/SYNDROME_GENERATOR_TB_TOP.sv

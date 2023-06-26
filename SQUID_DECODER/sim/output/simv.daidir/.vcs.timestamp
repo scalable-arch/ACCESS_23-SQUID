@@ -1,0 +1,116 @@
+0 
+35
++itf+/usr/synopsys/vcs/R-2020.12-SP1-1/linux64/lib/vcsdp_lite.tab
++vcsd1
++vpi
+-Mamsrun=
+-Masflags=
+-Mcc=gcc
+-Mcfl= -pipe -fPIC -O -I/usr/synopsys/vcs/R-2020.12-SP1-1/include
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mexternalobj=
+-Mldflags= -Wl,--no-as-needed -rdynamic
+-Mobjects= /usr/synopsys/vcs/R-2020.12-SP1-1/linux64/lib/libvirsim.so /usr/synopsys/vcs/R-2020.12-SP1-1/linux64/lib/liberrorinf.so /usr/synopsys/vcs/R-2020.12-SP1-1/linux64/lib/libsnpsmalloc.so /usr/synopsys/vcs/R-2020.12-SP1-1/linux64/lib/libvfs.so
+-Mout=simv
+-Msaverestoreobj=/usr/synopsys/vcs/R-2020.12-SP1-1/linux64/lib/vcs_save_restore_new.o
+-Msyslibs=/usr/synopsys/verdi/R-2020.12-SP1-1/share/PLI/VCS/LINUX64/pli.a -ldl
+-Mvcsaceobjs=
+-Mxcflags= -pipe -fPIC -I/usr/synopsys/vcs/R-2020.12-SP1-1/include
+-Mxllcflags=
+-P
+-Xufe=2steps
+-debug_access+all
+-f /home/pdtowctor/synthesis/SQUID_DECODER/sim/..//rtl/filelist.f
+-f /home/pdtowctor/synthesis/SQUID_DECODER/sim/..//sim/tb/filelist.f
+-fsdb
+-full64
+-gen_obj
+-kdb
+-picarchive
+-sverilog
+/usr/synopsys/vcs/R-2020.12-SP1-1/linux64/bin/vcs1
+/usr/synopsys/verdi/R-2020.12-SP1-1/share/PLI/VCS/LINUX64/verdi.tab
+/home/pdtowctor/synthesis/SQUID_DECODER/sim/..//sim/tb/filelist.f
+/home/pdtowctor/synthesis/SQUID_DECODER/sim/..//rtl/filelist.f
+54
+_CE_M=
+_CE_CONDA=
+XDG_SESSION_ID=219
+XDG_RUNTIME_DIR=/run/user/1006
+XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop
+VSCODE_IPC_HOOK_CLI=/run/user/1006/vscode-ipc-2608dfa9-1082-40aa-90ac-f6a9e8b20ba8.sock
+VSCODE_GIT_IPC_HANDLE=/run/user/1006/vscode-git-6c907affec.sock
+VSCODE_GIT_ASKPASS_NODE=/home/pdtowctor/.vscode-server/bin/74b1f979648cc44d385a2286793c226e611f59e7/node
+VSCODE_GIT_ASKPASS_MAIN=/home/pdtowctor/.vscode-server/bin/74b1f979648cc44d385a2286793c226e611f59e7/extensions/git/dist/askpass-main.js
+VSCODE_GIT_ASKPASS_EXTRA_ARGS=
+VMR_MODE_FLAG=64
+VERDI_HOME=/usr/synopsys/verdi/R-2020.12-SP1-1
+VCS_MX_HOME_INTERNAL=1
+VCS_MODE_FLAG=64
+VCS_HOME=/usr/synopsys/vcs/R-2020.12-SP1-1
+VCS_DEPTH=0
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH=linux64
+UNAME=/bin/uname
+TOOL_HOME=/usr/synopsys/vcs/R-2020.12-SP1-1/linux64
+TERM_PROGRAM_VERSION=1.71.2
+TERM_PROGRAM=vscode
+SSH_CONNECTION=112.157.194.17 49254 115.145.211.247 8002
+SSH_CLIENT=112.157.194.17 49254 8002
+SPYGLASS_HOME=/usr/synopsys/spyglass/P-2019.06-SP2-17/SPYGLASS_HOME
+SNPS_VERDI_INTERNAL_LP_XML_NEW_FLOW=1
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+ROOT_PATH=/home/pdtowctor/synthesis/SQUID_DECODER/sim/../
+OVA_UUM=0
+LESSOPEN=| /usr/bin/lesspipe %s
+LESSCLOSE=/usr/bin/lesspipe %s %s
+LC_TIME=ko_KR.UTF-8
+LC_TELEPHONE=ko_KR.UTF-8
+LC_PAPER=ko_KR.UTF-8
+LC_NUMERIC=ko_KR.UTF-8
+LC_NAME=ko_KR.UTF-8
+LC_MONETARY=ko_KR.UTF-8
+LC_MEASUREMENT=ko_KR.UTF-8
+LC_IDENTIFICATION=ko_KR.UTF-8
+LC_ALL=C
+LC_ADDRESS=ko_KR.UTF-8
+GOPATH=/home/pdtowctor/base/simulator/go
+GIT_ASKPASS=/home/pdtowctor/.vscode-server/bin/74b1f979648cc44d385a2286793c226e611f59e7/extensions/git/dist/askpass.sh
+DC_HOME=/usr/synopsys/syn/Q-2019.12-SP5-5
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1006/bus
+CUDA_HOME=/usr/local/cuda
+CONDA_SHLVL=1
+CONDA_PYTHON_EXE=/compuworks/anaconda3/bin/python
+CONDA_PROMPT_MODIFIER=(base) 
+CONDA_PREFIX=/compuworks/anaconda3
+CONDA_EXE=/compuworks/anaconda3/bin/conda
+CONDA_DEFAULT_ENV=base
+COLORTERM=truecolor
+0
+15
+1664076498 /home/pdtowctor/synthesis/SQUID_DECODER/sim/..//rtl/SQUID_DECODER.sv
+1664056091 /home/pdtowctor/synthesis/SQUID_DECODER/sim/..//rtl/SECOND_LEVEL_DECODER.sv
+1664057654 /home/pdtowctor/synthesis/SQUID_DECODER/sim/..//rtl/FIRST_LEVEL_DECODER.sv
+1664055350 /home/pdtowctor/synthesis/SQUID_DECODER/sim/..//rtl/FORNEY.sv
+1664052283 /home/pdtowctor/synthesis/SQUID_DECODER/sim/..//rtl/CHIEN.sv
+1664052301 /home/pdtowctor/synthesis/SQUID_DECODER/sim/..//rtl/RIBM.sv
+1664048228 /home/pdtowctor/synthesis/SQUID_DECODER/sim/..//rtl/SYNDROME_GENERATOR.sv
+1663920026 /home/pdtowctor/synthesis/SQUID_DECODER/sim/..//rtl/FIRST_LEVEL_ENCODER.sv
+1664054456 /home/pdtowctor/synthesis/SQUID_DECODER/sim/..//rtl/GFDIV.sv
+1663920026 /home/pdtowctor/synthesis/SQUID_DECODER/sim/..//rtl/GFMULT.sv
+1664076574 /home/pdtowctor/synthesis/SQUID_DECODER/sim/..//sim/tb/SYNDROME_GENERATOR_TB_TOP.sv
+1664056809 /home/pdtowctor/synthesis/SQUID_DECODER/sim/..//rtl/filelist.f
+1663938473 /home/pdtowctor/synthesis/SQUID_DECODER/sim/..//sim/tb/filelist.f
+1618931515 /usr/synopsys/verdi/R-2020.12-SP1-1/share/PLI/VCS/LINUX64/verdi.tab
+1618974649 /usr/synopsys/vcs/R-2020.12-SP1-1/linux64/lib/vcsdp_lite.tab
+4
+1618976102 /usr/synopsys/vcs/R-2020.12-SP1-1/linux64/lib/libvirsim.so
+1618975343 /usr/synopsys/vcs/R-2020.12-SP1-1/linux64/lib/liberrorinf.so
+1618975120 /usr/synopsys/vcs/R-2020.12-SP1-1/linux64/lib/libsnpsmalloc.so
+1618975339 /usr/synopsys/vcs/R-2020.12-SP1-1/linux64/lib/libvfs.so
+1664076579 simv.daidir
+-1 partitionlib

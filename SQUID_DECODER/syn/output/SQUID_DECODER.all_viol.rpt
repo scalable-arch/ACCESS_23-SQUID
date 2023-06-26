@@ -1,0 +1,349 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : constraint
+        -all_violators
+        -verbose
+Design : SQUID_DECODER
+Version: Q-2019.12-SP5-5
+Date   : Sun Sep 25 17:27:51 2022
+****************************************
+
+
+    Net: weight_block_output[0][1]
+
+    Capacitance        0.0000000000
+  - min_capacitance    0.0000500000
+  ------------------------------
+    Slack              -0.0000500000  (VIOLATED)
+
+
+    Net: weight_block_output[0][2]
+
+    Capacitance        0.0000000000
+  - min_capacitance    0.0000500000
+  ------------------------------
+    Slack              -0.0000500000  (VIOLATED)
+
+
+    Net: weight_block_output[0][3]
+
+    Capacitance        0.0000000000
+  - min_capacitance    0.0000500000
+  ------------------------------
+    Slack              -0.0000500000  (VIOLATED)
+
+
+    Net: weight_block_output[0][4]
+
+    Capacitance        0.0000000000
+  - min_capacitance    0.0000500000
+  ------------------------------
+    Slack              -0.0000500000  (VIOLATED)
+
+
+    Net: weight_block_output[0][5]
+
+    Capacitance        0.0000000000
+  - min_capacitance    0.0000500000
+  ------------------------------
+    Slack              -0.0000500000  (VIOLATED)
+
+
+    Net: weight_block_output[1][1]
+
+    Capacitance        0.0000000000
+  - min_capacitance    0.0000500000
+  ------------------------------
+    Slack              -0.0000500000  (VIOLATED)
+
+
+    Net: weight_block_output[1][2]
+
+    Capacitance        0.0000000000
+  - min_capacitance    0.0000500000
+  ------------------------------
+    Slack              -0.0000500000  (VIOLATED)
+
+
+    Net: weight_block_output[1][3]
+
+    Capacitance        0.0000000000
+  - min_capacitance    0.0000500000
+  ------------------------------
+    Slack              -0.0000500000  (VIOLATED)
+
+
+    Net: weight_block_output[1][4]
+
+    Capacitance        0.0000000000
+  - min_capacitance    0.0000500000
+  ------------------------------
+    Slack              -0.0000500000  (VIOLATED)
+
+
+    Net: weight_block_output[1][5]
+
+    Capacitance        0.0000000000
+  - min_capacitance    0.0000500000
+  ------------------------------
+    Slack              -0.0000500000  (VIOLATED)
+
+
+    Net: weight_block_output[2][1]
+
+    Capacitance        0.0000000000
+  - min_capacitance    0.0000500000
+  ------------------------------
+    Slack              -0.0000500000  (VIOLATED)
+
+
+    Net: weight_block_output[2][2]
+
+    Capacitance        0.0000000000
+  - min_capacitance    0.0000500000
+  ------------------------------
+    Slack              -0.0000500000  (VIOLATED)
+
+
+    Net: weight_block_output[2][3]
+
+    Capacitance        0.0000000000
+  - min_capacitance    0.0000500000
+  ------------------------------
+    Slack              -0.0000500000  (VIOLATED)
+
+
+    Net: weight_block_output[2][4]
+
+    Capacitance        0.0000000000
+  - min_capacitance    0.0000500000
+  ------------------------------
+    Slack              -0.0000500000  (VIOLATED)
+
+
+    Net: weight_block_output[2][5]
+
+    Capacitance        0.0000000000
+  - min_capacitance    0.0000500000
+  ------------------------------
+    Slack              -0.0000500000  (VIOLATED)
+
+
+    Net: weight_block_output[3][1]
+
+    Capacitance        0.0000000000
+  - min_capacitance    0.0000500000
+  ------------------------------
+    Slack              -0.0000500000  (VIOLATED)
+
+
+    Net: weight_block_output[3][2]
+
+    Capacitance        0.0000000000
+  - min_capacitance    0.0000500000
+  ------------------------------
+    Slack              -0.0000500000  (VIOLATED)
+
+
+    Net: weight_block_output[3][3]
+
+    Capacitance        0.0000000000
+  - min_capacitance    0.0000500000
+  ------------------------------
+    Slack              -0.0000500000  (VIOLATED)
+
+
+    Net: weight_block_output[3][4]
+
+    Capacitance        0.0000000000
+  - min_capacitance    0.0000500000
+  ------------------------------
+    Slack              -0.0000500000  (VIOLATED)
+
+
+    Net: weight_block_output[3][5]
+
+    Capacitance        0.0000000000
+  - min_capacitance    0.0000500000
+  ------------------------------
+    Slack              -0.0000500000  (VIOLATED)
+
+
+    Net: weight_block_output[4][1]
+
+    Capacitance        0.0000000000
+  - min_capacitance    0.0000500000
+  ------------------------------
+    Slack              -0.0000500000  (VIOLATED)
+
+
+    Net: weight_block_output[4][2]
+
+    Capacitance        0.0000000000
+  - min_capacitance    0.0000500000
+  ------------------------------
+    Slack              -0.0000500000  (VIOLATED)
+
+
+    Net: weight_block_output[4][3]
+
+    Capacitance        0.0000000000
+  - min_capacitance    0.0000500000
+  ------------------------------
+    Slack              -0.0000500000  (VIOLATED)
+
+
+    Net: weight_block_output[4][4]
+
+    Capacitance        0.0000000000
+  - min_capacitance    0.0000500000
+  ------------------------------
+    Slack              -0.0000500000  (VIOLATED)
+
+
+    Net: weight_block_output[4][5]
+
+    Capacitance        0.0000000000
+  - min_capacitance    0.0000500000
+  ------------------------------
+    Slack              -0.0000500000  (VIOLATED)
+
+
+    Net: weight_block_output[5][1]
+
+    Capacitance        0.0000000000
+  - min_capacitance    0.0000500000
+  ------------------------------
+    Slack              -0.0000500000  (VIOLATED)
+
+
+    Net: weight_block_output[5][2]
+
+    Capacitance        0.0000000000
+  - min_capacitance    0.0000500000
+  ------------------------------
+    Slack              -0.0000500000  (VIOLATED)
+
+
+    Net: weight_block_output[5][3]
+
+    Capacitance        0.0000000000
+  - min_capacitance    0.0000500000
+  ------------------------------
+    Slack              -0.0000500000  (VIOLATED)
+
+
+    Net: weight_block_output[5][4]
+
+    Capacitance        0.0000000000
+  - min_capacitance    0.0000500000
+  ------------------------------
+    Slack              -0.0000500000  (VIOLATED)
+
+
+    Net: weight_block_output[5][5]
+
+    Capacitance        0.0000000000
+  - min_capacitance    0.0000500000
+  ------------------------------
+    Slack              -0.0000500000  (VIOLATED)
+
+
+    Net: weight_block_output[6][1]
+
+    Capacitance        0.0000000000
+  - min_capacitance    0.0000500000
+  ------------------------------
+    Slack              -0.0000500000  (VIOLATED)
+
+
+    Net: weight_block_output[6][2]
+
+    Capacitance        0.0000000000
+  - min_capacitance    0.0000500000
+  ------------------------------
+    Slack              -0.0000500000  (VIOLATED)
+
+
+    Net: weight_block_output[6][3]
+
+    Capacitance        0.0000000000
+  - min_capacitance    0.0000500000
+  ------------------------------
+    Slack              -0.0000500000  (VIOLATED)
+
+
+    Net: weight_block_output[6][4]
+
+    Capacitance        0.0000000000
+  - min_capacitance    0.0000500000
+  ------------------------------
+    Slack              -0.0000500000  (VIOLATED)
+
+
+    Net: weight_block_output[6][5]
+
+    Capacitance        0.0000000000
+  - min_capacitance    0.0000500000
+  ------------------------------
+    Slack              -0.0000500000  (VIOLATED)
+
+
+    Net: weight_block_output[7][1]
+
+    Capacitance        0.0000000000
+  - min_capacitance    0.0000500000
+  ------------------------------
+    Slack              -0.0000500000  (VIOLATED)
+
+
+    Net: weight_block_output[7][2]
+
+    Capacitance        0.0000000000
+  - min_capacitance    0.0000500000
+  ------------------------------
+    Slack              -0.0000500000  (VIOLATED)
+
+
+    Net: weight_block_output[7][3]
+
+    Capacitance        0.0000000000
+  - min_capacitance    0.0000500000
+  ------------------------------
+    Slack              -0.0000500000  (VIOLATED)
+
+
+    Net: weight_block_output[7][4]
+
+    Capacitance        0.0000000000
+  - min_capacitance    0.0000500000
+  ------------------------------
+    Slack              -0.0000500000  (VIOLATED)
+
+
+    Net: weight_block_output[7][5]
+
+    Capacitance        0.0000000000
+  - min_capacitance    0.0000500000
+  ------------------------------
+    Slack              -0.0000500000  (VIOLATED)
+
+
+    Design: SQUID_DECODER
+
+    max_area           0.0000000000
+  - Current Area       2093.9660644531
+  ------------------------------
+    Slack              -2093.9660644531  (VIOLATED)
+
+
+    Design: SQUID_DECODER
+
+    max_leakage_power      0.0000000000
+  - Current Leakage Power  138.5329589844
+  ----------------------------------
+    Slack                  -138.5329589844  (VIOLATED)
+
+
+1

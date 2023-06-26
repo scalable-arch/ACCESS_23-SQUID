@@ -1,0 +1,1 @@
+$ROOT_PATH/sim/tb/SQUID_ENCODER_TOP_TB.sv

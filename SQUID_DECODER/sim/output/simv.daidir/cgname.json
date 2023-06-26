@@ -1,0 +1,32 @@
+{
+    "std": [
+        "std",
+        "reYIK",
+        "module",
+        1
+    ],
+    "GFMULT_TOP_TB": [
+        "GFMULT_TOP_TB",
+        "iAe1h",
+        "module",
+        2
+    ],
+    "GFDIV": [
+        "GFDIV",
+        "Bph3R",
+        "module",
+        3
+    ],
+    "FIRST_LEVEL_DECODER": [
+        "FIRST_LEVEL_DECODER",
+        "Ckfhk",
+        "module",
+        4
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module",
+        5
+    ]
+}

@@ -1,0 +1,671 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+              Version Q-2019.12-SP5-5 for linux64 - Mar 21, 2021 
+
+                    Copyright (c) 1988 - 2021 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+# ---------------------------------------
+# DESIGN PROFILE
+# ---------------------------------------
+set topmodule_name     	SQUID_DECODER
+SQUID_DECODER
+set clk_port_name       clk
+clk
+set clk_freq            440
+440
+# ---------------------------------------
+# Read Libraries
+# ---------------------------------------
+set LIBLIST_PATH        $env(LIBLIST_PATH)
+/home/pdtowctor/synthesis/SQUID_DECODER/syn/..//syn/lib/lib_container.tcl
+source $LIBLIST_PATH
+/media/0/LogicLibraries/UMC/28nm/35uhd/udl/svt/latest/liberty/symbol/um28nchslogl35udl140f.sdb
+# ---------------------------------------
+# Read Source Codes
+# ---------------------------------------
+set RTL_PATH            $env(RTL_PATH)
+/home/pdtowctor/synthesis/SQUID_DECODER/syn/..//rtl/
+read_file $RTL_PATH -autoread -recursive -format sverilog -top $topmodule_name
+== READ_FILE autoread for top design 'SQUID_DECODER' ==
+
+Starting READ_FILE autoread mode...
+Information: Adding '/home/pdtowctor/synthesis/SQUID_DECODER/rtl/'.  (AUTOREAD-100)
+Warning: Adding missing directory to search_path - '/home/pdtowctor/synthesis/SQUID_DECODER/rtl/'. (AUTOREAD-105)
+Information: Source temp.m ignored by autoread due to filtering.  (AUTOREAD-102)
+Information: Adding '/home/pdtowctor/synthesis/SQUID_DECODER/rtl/FIRST_LEVEL_DECODER.sv'.  (AUTOREAD-100)
+Information: Adding '/home/pdtowctor/synthesis/SQUID_DECODER/rtl/GFDIV.sv'.  (AUTOREAD-100)
+Information: Adding '/home/pdtowctor/synthesis/SQUID_DECODER/rtl/SQUID_DECODER.sv'.  (AUTOREAD-100)
+Information: Adding '/home/pdtowctor/synthesis/SQUID_DECODER/rtl/GFMULT.sv'.  (AUTOREAD-100)
+Information: Adding '/home/pdtowctor/synthesis/SQUID_DECODER/rtl/FIRST_LEVEL_ENCODER.sv'.  (AUTOREAD-100)
+Information: Adding '/home/pdtowctor/synthesis/SQUID_DECODER/rtl/CHIEN.sv'.  (AUTOREAD-100)
+Information: Source n.py ignored by autoread due to filtering.  (AUTOREAD-102)
+Information: Adding '/home/pdtowctor/synthesis/SQUID_DECODER/rtl/SYNDROME_GENERATOR.sv'.  (AUTOREAD-100)
+Information: Adding '/home/pdtowctor/synthesis/SQUID_DECODER/rtl/FORNEY.sv'.  (AUTOREAD-100)
+Information: Adding '/home/pdtowctor/synthesis/SQUID_DECODER/rtl/RIBM.sv'.  (AUTOREAD-100)
+Information: Source filelist.f ignored by autoread due to filtering.  (AUTOREAD-102)
+Information: Adding '/home/pdtowctor/synthesis/SQUID_DECODER/rtl/SECOND_LEVEL_DECODER.sv'.  (AUTOREAD-100)
+Information: Scanning file { FIRST_LEVEL_DECODER.sv }. (AUTOREAD-303)
+Information: Scanning file { GFDIV.sv }. (AUTOREAD-303)
+Information: Scanning file { SQUID_DECODER.sv }. (AUTOREAD-303)
+Information: Scanning file { GFMULT.sv }. (AUTOREAD-303)
+Information: Scanning file { FIRST_LEVEL_ENCODER.sv }. (AUTOREAD-303)
+Information: Scanning file { CHIEN.sv }. (AUTOREAD-303)
+Information: Scanning file { SYNDROME_GENERATOR.sv }. (AUTOREAD-303)
+Information: Scanning file { FORNEY.sv }. (AUTOREAD-303)
+Information: Scanning file { RIBM.sv }. (AUTOREAD-303)
+Information: Scanning file { SECOND_LEVEL_DECODER.sv }. (AUTOREAD-303)
+Compiling source file /home/pdtowctor/synthesis/SQUID_DECODER/rtl/FIRST_LEVEL_ENCODER.sv
+Presto compilation completed successfully.
+Compiling source file /home/pdtowctor/synthesis/SQUID_DECODER/rtl/GFMULT.sv
+Presto compilation completed successfully.
+Compiling source file /home/pdtowctor/synthesis/SQUID_DECODER/rtl/SYNDROME_GENERATOR.sv
+Presto compilation completed successfully.
+Compiling source file /home/pdtowctor/synthesis/SQUID_DECODER/rtl/RIBM.sv
+Warning:  /home/pdtowctor/synthesis/SQUID_DECODER/rtl/RIBM.sv:89: the undeclared symbol 'cond_0' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/pdtowctor/synthesis/SQUID_DECODER/rtl/RIBM.sv:132: the undeclared symbol 'cond_1' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/pdtowctor/synthesis/SQUID_DECODER/rtl/RIBM.sv:175: the undeclared symbol 'cond_2' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/pdtowctor/synthesis/SQUID_DECODER/rtl/RIBM.sv:218: the undeclared symbol 'cond_3' assumed to have the default net type, which is 'wire'. (VER-936)
+Presto compilation completed successfully.
+Compiling source file /home/pdtowctor/synthesis/SQUID_DECODER/rtl/CHIEN.sv
+Presto compilation completed successfully.
+Compiling source file /home/pdtowctor/synthesis/SQUID_DECODER/rtl/GFDIV.sv
+Presto compilation completed successfully.
+Compiling source file /home/pdtowctor/synthesis/SQUID_DECODER/rtl/FORNEY.sv
+Presto compilation completed successfully.
+Compiling source file /home/pdtowctor/synthesis/SQUID_DECODER/rtl/SECOND_LEVEL_DECODER.sv
+Presto compilation completed successfully.
+Compiling source file /home/pdtowctor/synthesis/SQUID_DECODER/rtl/FIRST_LEVEL_DECODER.sv
+Presto compilation completed successfully.
+Compiling source file /home/pdtowctor/synthesis/SQUID_DECODER/rtl/SQUID_DECODER.sv
+Presto compilation completed successfully.
+Elaborating top design SQUID_DECODER
+Loading db file '/media/0/LogicLibraries/UMC/28nm/35uhd/udl/svt/latest/liberty/logic_synth/um28nchslogl35udl140f_ssgwc0p81v0c.db'
+Loading db file '/usr/synopsys/syn/Q-2019.12-SP5-5/libraries/syn/gtech.db'
+Loading db file '/usr/synopsys/syn/Q-2019.12-SP5-5/libraries/syn/standard.sldb'
+  Loading link library 'um28nchslogl35udl140f_ssgwc0p81v0c'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully. (SQUID_DECODER)
+Elaborated 1 design.
+Current design is now 'SQUID_DECODER'.
+Information: Building the design 'FIRST_LEVEL_ENCODER'. (HDL-193)
+Presto compilation completed successfully. (FIRST_LEVEL_ENCODER)
+Information: Building the design 'SECOND_LEVEL_DECODER'. (HDL-193)
+Presto compilation completed successfully. (SECOND_LEVEL_DECODER)
+Information: Building the design 'FIRST_LEVEL_DECODER'. (HDL-193)
+
+Statistics for case statements in always block at line 13 in file
+	'/home/pdtowctor/synthesis/SQUID_DECODER/rtl/FIRST_LEVEL_DECODER.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            14            |    auto/auto     |
+===============================================
+Presto compilation completed successfully. (FIRST_LEVEL_DECODER)
+Information: Building the design 'SYNDROME_GENERATOR'. (HDL-193)
+Presto compilation completed successfully. (SYNDROME_GENERATOR)
+Information: Building the design 'RIBM'. (HDL-193)
+Presto compilation completed successfully. (RIBM)
+Information: Building the design 'CHIEN'. (HDL-193)
+Presto compilation completed successfully. (CHIEN)
+Information: Building the design 'FORNEY'. (HDL-193)
+Presto compilation completed successfully. (FORNEY)
+Information: Building the design 'GFMULT'. (HDL-193)
+Presto compilation completed successfully. (GFMULT)
+Information: Building the design 'GFDIV'. (HDL-193)
+
+Statistics for case statements in always block at line 8 in file
+	'/home/pdtowctor/synthesis/SQUID_DECODER/rtl/GFDIV.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            9             |    auto/auto     |
+===============================================
+Presto compilation completed successfully. (GFDIV)
+Autoread command completed successfully.
+# ---------------------------------------
+# 1. Environments Setting
+# ---------------------------------------
+link
+
+  Linking design 'SQUID_DECODER'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  um28nchslogl35udl140f_ssgwc0p81v0c (library) /media/0/LogicLibraries/UMC/28nm/35uhd/udl/svt/latest/liberty/logic_synth/um28nchslogl35udl140f_ssgwc0p81v0c.db
+
+1
+uniquify
+Information: Uniquified 8 instances of design 'FIRST_LEVEL_ENCODER'. (OPT-1056)
+Information: Uniquified 8 instances of design 'FIRST_LEVEL_DECODER'. (OPT-1056)
+Information: Uniquified 168 instances of design 'GFMULT'. (OPT-1056)
+Information: Uniquified 8 instances of design 'GFDIV'. (OPT-1056)
+1
+# ---------------------------------------
+# 2. Constraints Setting
+# ---------------------------------------
+# Clock
+# Reduce clock period to model wire delay (60% of original period)
+set delay_percentage 0.7
+0.7
+set clk_period [expr 1000 / double($clk_freq)]
+2.27272727273
+set clk_period [expr $clk_period * $delay_percentage]
+1.59090909091
+if {[sizeof_collection [get_ports $clk_port_name]] > 0} {
+  # Create real clock if clock port is found
+  set clk_name $clk_port_name
+  create_clock -period $clk_period -name $clk_name
+  # If real clock, set infinite drive strength
+  set_drive 0 $clk_name
+} elseif {[sizeof_collection [get_ports $clk_port_name]] == 0} {
+  # Create virtual clock if clock port is not found
+  set clk_name vclk
+  create_clock -period $clk_period -name $clk_name
+}
+Warning: Can't find port 'clk' in design 'SQUID_DECODER'. (UID-95)
+Warning: Can't find port 'clk' in design 'SQUID_DECODER'. (UID-95)
+Warning: Creating virtual clock named 'vclk' with no sources. (UID-348)
+1
+# Apply default timing constraints for modules
+set_input_delay  0.0 [all_inputs] -clock $clk_name
+1
+set_output_delay 0.0 [all_outputs] -clock $clk_name
+1
+# Transition time of a slope that drives the port,
+# such that a higher transition value means longer delays
+# This prevents the hold time violations that we don't have to care about
+set_input_transition 0.1 [all_inputs]
+1
+# Area
+# If max_area is set 0, DesignCompiler will minimize the design as small as possible
+set_max_area 0 
+1
+# ---------------------------------------
+# 3. Compilation
+# ---------------------------------------
+compile_ultra
+Loading db file '/usr/synopsys/syn/Q-2019.12-SP5-5/libraries/syn/dw_foundation.sldb'
+Warning: DesignWare synthetic library dw_foundation.sldb is added to the synthetic_library in the current command. (UISN-40)
+Information: Performing power optimization. (PWR-850)
+Analyzing: "/media/0/LogicLibraries/UMC/28nm/35uhd/udl/svt/latest/liberty/logic_synth/um28nchslogl35udl140f_ssgwc0p81v0c.db"
+Library analysis succeeded.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | Q-2019.12-DWBB_201912.5 |     *     |
+| Licensed DW Building Blocks        | Q-2019.12-DWBB_201912.5 |     *     |
+============================================================================
+
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 693 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'SQUID_DECODER'
+Information: Removing unused design 'GFMULT_64'. (OPT-1055)
+Information: Removing unused design 'GFMULT_65'. (OPT-1055)
+Information: Removing unused design 'GFMULT_71'. (OPT-1055)
+Information: Removing unused design 'GFMULT_72'. (OPT-1055)
+Information: Removing unused design 'GFMULT_78'. (OPT-1055)
+Information: Removing unused design 'GFMULT_85'. (OPT-1055)
+
+Loaded alib file './alib-52/um28nchslogl35udl140f_ssgwc0p81v0c.db.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping hierarchy first_encoder_0 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy first_decoder_0 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy first_encoder_7 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy first_encoder_6 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy first_encoder_5 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy first_encoder_4 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy first_encoder_3 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy first_encoder_2 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy first_encoder_1 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy first_decoder_7 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy first_decoder_6 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy first_decoder_5 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy first_decoder_4 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy first_decoder_3 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy first_decoder_2 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy first_decoder_1 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/chien before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_00 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gdiv_0 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gmult_37 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gmult_36 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gmult_35 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gmult_34 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gmult_33 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gmult_32 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gmult_31 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gmult_30 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gmult_27 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gmult_26 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gmult_25 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gmult_24 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gmult_23 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gmult_22 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gmult_21 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gmult_20 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gmult_17 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gmult_16 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gmult_15 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gmult_14 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gmult_13 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gmult_12 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gmult_11 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gmult_10 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gmult_07 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gmult_06 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gmult_05 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gmult_04 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gmult_03 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gmult_02 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gmult_01 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gmult_00 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/chien/gfmult_072 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/chien/gfmult_071 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/chien/gfmult_070 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/chien/gfmult_062 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/chien/gfmult_061 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/chien/gfmult_060 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/chien/gfmult_052 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/chien/gfmult_051 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/chien/gfmult_050 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/chien/gfmult_042 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/chien/gfmult_041 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/chien/gfmult_040 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/chien/gfmult_032 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/chien/gfmult_031 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/chien/gfmult_030 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/chien/gfmult_022 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/chien/gfmult_021 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/chien/gfmult_020 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/chien/gfmult_012 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/chien/gfmult_011 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/chien/gfmult_010 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/chien/gfmult_002 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/chien/gfmult_001 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/chien/gfmult_000 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_341 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_331 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_321 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_311 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_301 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_340 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_330 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_320 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_310 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_300 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_251 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_241 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_231 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_221 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_211 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_201 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_250 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_240 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_230 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_220 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_210 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_200 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_161 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_151 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_141 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_131 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_121 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_111 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_101 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_160 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_150 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_140 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_130 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_120 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_110 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_100 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_061 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_051 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_041 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_031 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_021 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_011 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_001 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_060 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_050 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_040 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_030 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_020 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_010 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/ribm/gfmult_000 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_3b before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_3a before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_39 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_38 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_37 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_36 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_35 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_34 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_33 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_32 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_31 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_30 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_2b before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_2a before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_29 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_28 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_27 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_26 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_25 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_24 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_23 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_22 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_21 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_20 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_1b before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_1a before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_19 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_18 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_17 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_16 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_15 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_14 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_13 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_12 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_11 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_10 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_0b before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_0a before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_09 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_08 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_07 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_06 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_05 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_04 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_03 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_02 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/syndrome_generator/gmult_01 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gdiv_7 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gdiv_6 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gdiv_5 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gdiv_4 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gdiv_3 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gdiv_2 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gdiv_1 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gdiv_7/gfmult before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gdiv_6/gfmult before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gdiv_5/gfmult before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gdiv_4/gfmult before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gdiv_3/gfmult before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gdiv_2/gfmult before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gdiv_1/gfmult before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy second_level_decoder/forney/gdiv_0/gfmult before Pass 1 (OPT-776)
+Information: Ungrouping 190 of 192 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'SECOND_LEVEL_DECODER'
+Information: Added key list 'DesignWare' to design 'SECOND_LEVEL_DECODER'. (DDB-72)
+  Processing 'SQUID_DECODER'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'SVP_TIE1_1' in the library 'um28nchslogl35udl140f_ssgwc0p81v0c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'SVP_TIE0_1' in the library 'um28nchslogl35udl140f_ssgwc0p81v0c' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+Threshold voltage group cell usage:
+>> SVT35 100.00%
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+Information: Ungrouping hierarchy second_level_decoder 'SECOND_LEVEL_DECODER' #insts = 1935. (OPT-777)
+Information: Added key list 'DesignWare' to design 'SQUID_DECODER'. (DDB-72)
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+  Mapping Optimization (Phase 3)
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:28    3085.0      0.18       6.5       0.0                            232.2654
+    0:00:29    3080.7      0.20       7.0       0.0                            231.9125
+
+Threshold voltage group cell usage:
+>> SVT35 100.00%
+
+  Beginning Constant Register Removal
+  -----------------------------------
+    0:00:29    3080.7      0.20       7.0       0.0                            231.9125
+    0:00:29    3080.7      0.20       7.0       0.0                            231.9125
+
+Threshold voltage group cell usage:
+>> SVT35 100.00%
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+
+Threshold voltage group cell usage:
+>> SVT35 100.00%
+
+  Beginning Isolate Ports
+  -----------------------
+
+Threshold voltage group cell usage:
+>> SVT35 100.00%
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:30    1463.8      0.56      19.9       0.0                             76.1344
+    0:00:32    1641.9      0.32      12.0       0.0                             93.4536
+    0:00:32    1641.9      0.32      12.0       0.0                             93.4536
+    0:00:32    1641.9      0.32      12.0       0.0                             93.4536
+
+Threshold voltage group cell usage:
+>> SVT35 100.00%
+    0:00:33    1641.9      0.32      12.0       0.0                             93.4536
+    0:00:33    1641.9      0.32      12.0       0.0                             93.4536
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:34    1620.2      0.32      11.9       0.0                             91.6100
+    0:00:35    1740.2      0.24       8.6       0.0                            103.1053
+    0:00:35    1740.2      0.24       8.6       0.0                            103.1053
+    0:00:35    1740.9      0.24       8.6       0.0                            103.2568
+    0:00:35    1740.9      0.24       8.6       0.0                            103.2568
+    0:00:37    1832.1      0.25       9.0       0.0                            112.4082
+    0:00:37    1832.1      0.25       9.0       0.0                            112.4082
+    0:00:39    2044.4      0.14       5.4       0.0                            131.5123
+    0:00:39    2044.4      0.14       5.4       0.0                            131.5123
+    0:00:42    2154.1      0.15       5.3       0.0                            141.6080
+    0:00:42    2154.1      0.15       5.3       0.0                            141.6080
+    0:00:49    2414.5      0.06       2.0       0.0                            165.8172
+    0:00:49    2414.5      0.06       2.0       0.0                            165.8172
+    0:00:59    2535.3      0.05       1.8       0.0                            178.1029
+    0:00:59    2535.3      0.05       1.8       0.0                            178.1029
+    0:01:08    2698.0      0.04       0.8       0.0                            192.7629
+    0:01:08    2698.0      0.04       0.8       0.0                            192.7629
+    0:01:17    2716.7      0.02       0.7       0.0                            194.2118
+    0:01:17    2716.7      0.02       0.7       0.0                            194.2118
+    0:01:22    2773.7      0.00       0.0       0.0                            199.7347
+    0:01:22    2773.7      0.00       0.0       0.0                            199.7347
+    0:01:22    2773.7      0.00       0.0       0.0                            199.7347
+
+
+  Beginning Design Rule Fixing  (min_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:01:22    2773.7      0.00       0.0       0.0                            199.7347
+  Global Optimization (Phase 31)
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+    0:01:22    2773.7      0.00       0.0       0.0                            199.7347
+    0:01:22    2773.7      0.00       0.0       0.0                            199.7347
+
+Threshold voltage group cell usage:
+>> SVT35 100.00%
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:01:22    2773.7      0.00       0.0       0.0                            199.7347
+  Global Optimization (Phase 34)
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+  Global Optimization (Phase 46)
+  Global Optimization (Phase 47)
+  Global Optimization (Phase 48)
+    0:01:25    2494.3      0.01       0.3       0.0 weight_block_output[4][1]  173.1395
+    0:01:25    2491.7      0.01       0.2       0.0                            172.8504
+    0:01:42    2619.1      0.00       0.1       0.0                            184.3899
+    0:01:42    2619.1      0.00       0.1       0.0                            184.3899
+    0:01:42    2572.0      0.00       0.0       0.0                            179.2128
+    0:01:42    2572.0      0.00       0.0       0.0                            179.2128
+    0:01:57    2703.4      0.02       0.5       0.0                            191.7914
+    0:01:57    2703.4      0.02       0.5       0.0                            191.7914
+    0:01:57    2725.0      0.01       0.2       0.0                            193.7939
+    0:01:57    2725.0      0.01       0.2       0.0                            193.7939
+    0:02:38    2835.7      0.02       0.4       0.0                            204.0877
+    0:02:38    2835.7      0.02       0.4       0.0                            204.0877
+    0:02:39    2818.2      0.00       0.0       0.0                            201.2773
+    0:02:39    2818.2      0.00       0.0       0.0                            201.2773
+    0:02:39    2818.2      0.00       0.0       0.0                            201.2773
+    0:02:39    2818.2      0.00       0.0       0.0                            201.2773
+    0:02:39    2818.2      0.00       0.0       0.0                            201.2773
+    0:02:39    2818.2      0.00       0.0       0.0                            201.2773
+    0:02:39    2818.2      0.00       0.0       0.0                            201.2773
+    0:02:39    2818.2      0.00       0.0       0.0                            201.2773
+    0:02:39    2818.2      0.00       0.0       0.0                            201.2773
+    0:02:39    2818.2      0.00       0.0       0.0                            201.2773
+    0:02:39    2818.2      0.00       0.0       0.0                            201.2773
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:02:39    2818.2      0.00       0.0       0.0                            201.2773
+    0:02:41    2418.4      0.01       0.1       0.0                            162.8128
+    0:02:41    2383.9      0.00       0.0       0.0                            160.4079
+    0:02:41    2383.9      0.00       0.0       0.0                            160.4079
+    0:02:42    2365.0      0.00       0.0       0.0                            158.6888
+    0:02:42    2342.0      0.00       0.0       0.0                            156.5448
+    0:02:42    2342.0      0.00       0.0       0.0                            156.5448
+    0:02:42    2342.0      0.00       0.0       0.0                            156.5448
+    0:02:42    2342.0      0.00       0.0       0.0                            156.5448
+    0:02:42    2342.0      0.00       0.0       0.0                            156.5448
+    0:02:42    2342.0      0.00       0.0       0.0                            156.5448
+    0:02:45    2094.0      0.00       0.0       0.0                            132.3687
+Loading db file '/media/0/LogicLibraries/UMC/28nm/35uhd/udl/svt/latest/liberty/logic_synth/um28nchslogl35udl140f_ssgwc0p81v0c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+# ---------------------------------------
+# 4. Design Reports
+# ---------------------------------------
+check_design  > $topmodule_name.check_design.rpt
+report_constraint -all_violators -verbose -sig 10 > $topmodule_name.all_viol.rpt
+report_design > $topmodule_name.design.rpt
+report_area -physical -hierarchy > $topmodule_name.area.rpt
+report_cell > $topmodule_name.cell.rpt
+report_qor > $topmodule_name.qor.rpt
+report_reference > $topmodule_name.reference.rpt
+report_resources > $topmodule_name.resources.rpt
+report_hierarchy -full > $topmodule_name.hierarchy.rpt
+report_timing -nworst 10 -max_paths 10 > $topmodule_name.timing.rpt
+report_power -analysis_effort high > $topmodule_name.power.rpt
+report_threshold_voltage_group > $topmodule_name.vth.rpt
+# Dump out the constraints in an SDC file
+write_sdc $topmodule_name.constraints.sdc
+1
+# Dump out the synthesized database and gate-level-netlist
+write -hierarchy -format ddc -output      $topmodule_name.ddc
+Writing ddc file 'SQUID_DECODER.ddc'.
+1
+write -hierarchy -format verilog -output  $topmodule_name.netlist.v
+Writing verilog file '/home/pdtowctor/synthesis/SQUID_DECODER/syn/output/SQUID_DECODER.netlist.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+1
+exit
+
+Memory usage for this session 605 Mbytes.
+Memory usage for this session including child processes 605 Mbytes.
+CPU usage for this session 248 seconds ( 0.07 hours ).
+Elapsed time for this session 250 seconds ( 0.07 hours ).
+
+Thank you...
