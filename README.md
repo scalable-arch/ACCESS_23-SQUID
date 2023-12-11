@@ -16,3 +16,11 @@ Paper URL: **(to be updated later)**
 
 # Environmental Setup
 - $ conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.4 -c pytorch -c nvidia -c conda-forge
+
+# Scripts
+- # run_recovery_6.sh #
+>>  d
+- # run_sbu_dbu_experiment.sh #
+>> d
+- # run_wn.sh #
+>> d
